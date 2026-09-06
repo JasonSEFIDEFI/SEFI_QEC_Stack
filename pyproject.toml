@@ -1,0 +1,11 @@
+[project]
+name = "sefi-qec-stack"
+version = "0.1.0"
+description = "Quantum error correction engine aligned with SEFI geometric identity."
+authors = [{ name = "Jason Dutton", email = "SEFIDEFI@OUTLOOK.COM" }]
+license = "MIT"
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
