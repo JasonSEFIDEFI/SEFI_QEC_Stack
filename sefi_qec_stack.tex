@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{codegray}{gray}{0.95}
+
+\lstset{
+  backgroundcolor=\color{codegray},
+  basicstyle=\ttfamily\small,
+  frame=single,
+  rulecolor=\color{black!20},
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  breaklines=true
+}
+
+\title{SEFI--QEC Stack}
+\author{Jason Dutton}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The SEFI--QEC Stack is a modular quantum-error-correction engine built on geometric identity principles from the SEFI canon. It provides stabilizer acquisition, syndrome transport, multi-decoder correction, Pauli-frame routing, and warp-residual geometric analysis in a dependency-free architecture.
+\end{abstract}
+
+\section{Purpose}
+
+The SEFI--QEC Stack serves as the dedicated quantum-error-correction engine for SEFI and GWFM research. It is designed for real-time decoding pipelines, low-latency correction, deterministic transport, and geometric consistency across worldline-based field models. The architecture demonstrates autonomous systems-level development suitable for high-level technical evaluation.
+
+\section{Features}
+
+\begin{itemize}[leftmargin=*]
+  \item Stabilizer parity evaluation
+  \item Syndrome extraction and transport
+  \item Majority-vote and stabilizer-energy decoders
+  \item Pauli-frame consistency and correction routing
+  \item Warp-residual geometry analysis
+  \item Unified \texttt{stack.py} orchestrator for full-pipeline coordination
+  \item Package-ready directory structure using \texttt{\_[0m\_init\_\_.py} in all modules
+\end{itemize}
+
+\section{Repository Structure}
+
+\begin{lstlisting}
+qec_stack/
+|
++-- stack.py
+|
++-- stabilizers/
+|   +-- __init__.py
+|   +-- stabilizer_core.py
+|   +-- parity_eval.py
+|
++-- syndromes/
+|   +-- __init__.py
+|   +-- extract.py
+|   +-- transport.py
+|
++-- decoders/
+|   +-- __init__.py
+|   +-- majority_vote.py
+|   +-- energy_min.py
+|
++-- pauli_frame/
+|   +-- __init__.py
+|   +-- frame_router.py
+|
++-- warp_geometry/
+    +-- __init__.py
+    +-- residual_analysis.py
+\end{lstlisting}
+
+\section{Usage}
+
+Import the stack as a package:
+
+\begin{lstlisting}[language=Python]
+from qec_stack import stack
+
+engine = stack.QECStack()
+engine.run()
+\end{lstlisting}
+
+Individual modules can also be called directly:
+
+\begin{lstlisting}[language=Python]
+from qec_stack.stabilizers import parity_eval
+from qec_stack.decoders import majority_vote
+\end{lstlisting}
+
+\section{License}
+
+MIT License.
+
+\section{Status}
+
+Active development as part of the SEFI and GWFM research platform.
+
+\end{document}

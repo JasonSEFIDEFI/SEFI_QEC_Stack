@@ -86,7 +86,7 @@ def sefi_qec_pipeline(observables, channel_model):
     phi = build_identity(observables)
 
     # worldline propagation BEFORE encoding
-    phi_prop = propagate(phi, steps=1)
+    phi_prop = propagate(phi, dt=1.0)
     tensor = WarpMetricTensor(phi_prop.warp, phi_prop.metric)
     energy = tensor.curvature_energy()
     log_event("WARP_METRIC", f"Curvature energy: {energy}")

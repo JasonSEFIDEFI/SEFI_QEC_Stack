@@ -1,8 +1,10 @@
-from transport.curvature import apply_curvature
+def propagate(Phi, dt=1.0):
+    """
+    GWFM worldline propagation.
+    """
 
-def propagate(Phi, steps=1):
-    """
-    Worldline propagation with curvature.
-    """
-    Phi_curved = apply_curvature(Phi, curvature=steps)
-    return Phi_curved
+    Phi.x += Phi.vx * dt
+    Phi.y += Phi.vy * dt
+    Phi.z += Phi.vz * dt
+
+    return Phi

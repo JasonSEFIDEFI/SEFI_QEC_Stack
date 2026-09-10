@@ -1,0 +1,1724 @@
+def to_binary(n):
+    """
+    Convert integer string to 4-bit binary.
+    """
+    try:
+        return format(int(n), "04b")
+    except ValueError:
+        return "0000"
+
+
+def compress(Phi):
+    """
+    Compress Phi into a pipe-delimited SEFI-QEC bitstring.
+    """
+    fields = [
+        to_binary(Phi.origin),
+        to_binary(Phi.authorship),
+        to_binary(Phi.sovereignty),
+        to_binary(Phi.warp),
+        to_binary(Phi.metric),
+    ]
+    return "|".join(fields)
+
+
+def decompress(bitstring):
+    """
+    Decompress pipe-delimited bitstring back into fields.
+    """
+    if "|" not in bitstring:
+        parts = [bitstring[i:i+4] for i in range(0, len(bitstring), 4)]
+    else:
+        parts = bitstring.split("|")
+
+    def parse(part, fallback="0"):
+        try:
+            value = int(part, 2)
+        except (ValueError, TypeError):
+            return fallback
+
+        if value > 9:
+            return fallback
+        return str(value)
+
+    if len(parts) < 5:
+        parts = parts + ["0000"] * (5 - len(parts))
+    elif len(parts) > 5:
+        parts = parts[:5]
+
+    return {
+        "origin": parse(parts[0]),
+        "authorship": parse(parts[1]),
+        "sovereignty": parse(parts[2]),
+        "warp": parse(parts[3]),
+        "metric": parse(parts[4]),
+    }
+def encode(Phi):
+    return compress(Phi)
+
+from core.identity_types import Phi
+
+def decode(bitstring):
+    parts = decompress(bitstring)
+    from core.identity_types import Phi
+    return Phi(
+        origin=parts["origin"],
+        authorship=parts["authorship"],
+        sovereignty=parts["sovereignty"],
+        warp=parts["warp"],
+        metric=parts["metric"]
+    )
+
+from codec.compress import compress, decompress
+from dataclasses import dataclass
+
+
+@dataclass
+class GeometricState:
+	"""Basic GWFM geometric state."""
+
+	x: float
+	y: float
+	z: float
+	vx: float
+	vy: float
+	vz: float
+class Phi:
+    """
+    Geometric identity object for SEFI-QEC.
+
+    SEFI Invariants:
+        origin
+        authorship
+        sovereignty
+        warp
+        metric
+
+    Geometry:
+        x, y, z
+        vx, vy, vz
+    """
+
+    def __init__(
+        self,
+        origin,
+        authorship,
+        sovereignty,
+        warp,
+        metric,
+        x=0.0,
+        y=0.0,
+        z=0.0,
+        vx=0.0,
+        vy=0.0,
+        vz=0.0
+    ):
+        self.origin = origin
+        self.authorship = authorship
+        self.sovereignty = sovereignty
+        self.warp = warp
+        self.metric = metric
+
+        # GWFM geometric state
+        self.x = x
+        self.y = y
+        self.z = z
+
+        self.vx = vx
+        self.vy = vy
+        self.vz = vz
+
+    def __repr__(self):
+        return (
+            f"Phi("
+            f"origin={self.origin}, "
+            f"authorship={self.authorship}, "
+            f"sovereignty={self.sovereignty}, "
+            f"warp={self.warp}, "
+            f"metric={self.metric}, "
+            f"x={self.x}, "
+            f"y={self.y}, "
+            f"z={self.z}, "
+            f"vx={self.vx}, "
+            f"vy={self.vy}, "
+            f"vz={self.vz}"
+            f")"
+        )
+        def fidelity(Phi_original, Phi_corrected):
+    """
+    Fidelity scoring:
+    1.0 = perfect match
+    0.9 = metric corrected
+    0.85 = origin corrected
+    0.8 = authorship corrected
+    0.7 = sovereignty corrected
+    0.5 = warp corrected
+    0.0 = failure
+    """
+
+    if Phi_original.__dict__ == Phi_corrected.__dict__:
+        return 1.0
+
+    if Phi_original.origin == Phi_corrected.origin:
+        return 0.85
+
+    if Phi_original.metric == Phi_corrected.metric:
+        return 0.9
+
+    if Phi_original.authorship == Phi_corrected.authorship:
+        return 0.8
+
+    if Phi_original.sovereignty == Phi_corrected.sovereignty:
+        return 0.7
+
+    if Phi_original.warp == Phi_corrected.warp:
+        return 0.5
+
+    return 0.0
+import time
+
+def log_event(event_type, details):
+    """
+    SEFI Geometric Log
+    Records events with timestamps and structured details.
+    """
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{timestamp}] {event_type}: {details}")
+def check_authorship(Phi):
+    """
+    Authorship consistency check.
+    Minimal rule:
+        authorship must remain a single-digit integer.
+    Later this becomes a geometric stress-energy signature.
+    """
+    try:
+        a = int(Phi.authorship)
+        return 0 <= a <= 9
+    except ValueError:
+        return False
+def predict_collapse(fidelity_score, energy, threshold=0.5):
+    """
+    Predict collapse:
+    collapse if fidelity < threshold and energy is high.
+    """
+    return fidelity_score < threshold and energy > 10
+def check_metric(Phi):
+    """
+    Metric invariance check.
+    Minimal rule:
+        metric must be one of: 0, 1, 5
+    Later this becomes Lorentzian signature invariance.
+    """
+    return Phi.metric in ["0", "1", "5"]
+def check_origin(Phi):
+    """
+    Origin drift check.
+    Minimal rule:
+        origin must remain a single-digit integer.
+    Later this becomes a geometric emission-event invariant.
+    """
+    try:
+        o = int(Phi.origin)
+        return 0 <= o <= 9
+    except ValueError:
+        return False
+from quantum.sovereignty_surface import within_surface
+
+
+def check_sovereignty(Phi):
+    """
+    SEFI sovereignty check.
+
+    Sovereignty is maintained when the
+    worldline remains inside the allowed
+    sovereignty surface.
+    """
+
+    return within_surface(Phi)
+from core.identity_types import Phi
+from qec.authorship import check_authorship
+from qec.metric import check_metric
+from qec.origin import check_origin
+from qec.sovereignty import check_sovereignty
+
+
+def correct(Phi_rx):
+    """
+    SEFI/GWFM stabilizer.
+
+    Enforces:
+        - Origin invariance
+        - Authorship consistency
+        - Sovereignty boundary
+        - Warp recovery
+        - Metric invariance
+    """
+
+    warp_corrected = "0" if Phi_rx.warp == "X" else Phi_rx.warp
+
+    origin_corrected = (
+        Phi_rx.origin
+        if check_origin(Phi_rx)
+        else "0"
+    )
+
+    authorship_corrected = (
+        Phi_rx.authorship
+        if check_authorship(Phi_rx)
+        else "0"
+    )
+
+    sovereignty_corrected = (
+        Phi_rx.sovereignty
+        if check_sovereignty(Phi_rx)
+        else "0"
+    )
+
+    metric_corrected = (
+        Phi_rx.metric
+        if check_metric(Phi_rx)
+        else "1"
+    )
+# qec/syndrome.py
+
+def geometric_syndrome(phi):
+
+    score = sovereignty_score(phi)
+
+    return {
+        "sovereignty_error": score < 0.8,
+        "warp_error": phi.warp == "X",
+        "metric_error": phi.metric not in ["0", "1", "5"]
+    }# qec/syndrome.py
+
+def geometric_syndrome(phi):
+
+    score = sovereignty_score(phi)
+
+    return {
+        "sovereignty_error": score < 0.8,
+        "warp_error": phi.warp == "X",
+        "metric_error": phi.metric not in ["0", "1", "5"]
+    }
+class WarpMetricTensor:
+    """
+    Minimal SEFI warp-metric tensor.
+    Encodes coupling between warp and metric.
+    """
+    def __init__(self, warp, metric):
+        self.warp = int(warp) if str(warp).isdigit() else 0
+        self.metric = int(metric) if str(metric).isdigit() else 1
+
+    def curvature_energy(self):
+        """
+        Simple energy: E = warp^2 * metric
+        """
+        return self.warp ** 2 * self.metric
+namespace SEFIQEC {
+
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Measurement;
+
+    operation EncodePhi(bits : Bool[]) : Result[] {
+
+        use register = Qubit[Length(bits)];
+
+        for i in IndexRange(bits) {
+
+            if bits[i] {
+                X(register[i]);
+            }
+        }
+
+        mutable results = [];
+
+        for q in register {
+            set results += [M(q)];
+        }
+
+        ResetAll(register);
+
+        return results;
+    }
+}namespace SEFIQEC {
+
+    open Microsoft.Quantum.Intrinsic;
+
+    operation OriginParity(register : Qubit[]) : Unit {
+
+        CNOT(register[0], register[1]);
+        CNOT(register[1], register[2]);
+        CNOT(register[2], register[3]);
+    }
+
+    operation AuthorshipParity(register : Qubit[]) : Unit {
+
+        CNOT(register[4], register[5]);
+        CNOT(register[5], register[6]);
+        CNOT(register[6], register[7]);
+    }
+
+    operation SovereigntyParity(register : Qubit[]) : Unit {
+
+        CNOT(register[8], register[9]);
+        CNOT(register[9], register[10]);
+        CNOT(register[10], register[11]);
+    }
+
+    operation WarpParity(register : Qubit[]) : Unit {
+
+        CNOT(register[12], register[13]);
+        CNOT(register[13], register[14]);
+        CNOT(register[14], register[15]);
+    }
+
+    operation MetricParity(register : Qubit[]) : Unit {
+
+        CNOT(register[16], register[17]);
+        CNOT(register[17], register[18]);
+        CNOT(register[18], register[19]);
+    }
+}_namespace SEFIQEC {
+
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Measurement;
+
+    operation MeasureSyndrome(register : Qubit[]) : Result[] {
+
+        mutable syndrome = [];
+
+        for q in register {
+            set syndrome += [M(q)];
+        }
+
+        return syndrome;
+    }
+}import os
+from typing import Any
+
+
+try:
+    from azure.quantum import Workspace
+except ImportError:
+    Workspace = None
+
+
+AZURE_AVAILABLE = Workspace is not None
+
+
+class AzureBridge:
+
+    def __init__(
+        self,
+        subscription_id: str | None = None,
+        resource_group: str | None = None,
+        workspace_name: str | None = None,
+        location: str | None = None,
+        workspace_factory: Any | None = None,
+    ):
+
+        self.subscription_id = subscription_id or os.getenv("AZURE_QUANTUM_SUBSCRIPTION_ID")
+        self.resource_group = resource_group or os.getenv("AZURE_QUANTUM_RESOURCE_GROUP")
+        self.workspace_name = workspace_name or os.getenv("AZURE_QUANTUM_WORKSPACE_NAME")
+        self.location = location or os.getenv("AZURE_QUANTUM_LOCATION")
+        self.default_target_name = os.getenv("AZURE_QUANTUM_TARGET")
+        self.default_provider_id = os.getenv("AZURE_QUANTUM_PROVIDER_ID")
+        s
+import os
+from typing import Any
+
+
+try:
+    from azure.quantum import Workspace
+except ImportError:
+    Workspace = None
+
+
+AZURE_AVAILABLE = Workspace is not None
+
+
+class AzureBridge:
+
+    def __init__(
+        self,
+        subscription_id: str | None = None,
+        resource_group: str | None = None,
+        workspace_name: str | None = None,
+        location: str | None = None,
+        workspace_factory: Any | None = None,
+    ):
+
+        self.subscription_id = subscription_id or os.getenv("AZURE_QUANTUM_SUBSCRIPTION_ID")
+        self.resource_group = resource_group or os.getenv("AZURE_QUANTUM_RESOURCE_GROUP")
+        self.workspace_name = workspace_name or os.getenv("AZURE_QUANTUM_WORKSPACE_NAME")
+        self.location = location or os.getenv("AZURE_QUANTUM_LOCATION")
+        self.default_target_name = os.getenv("AZURE_QUANTUM_TARGET")
+        self.default_provider_id = os.getenv("AZURE_QUANTUM_PROVIDER_ID")
+        self.workspace_factory = workspace_factory or Workspace
+        self.workspace = None
+        self.target = None
+        self.target_name = None
+        self.provider_id = None
+        self.last_error = None
+
+        self.connected = False
+
+    def connect(self, target_name: str | None = None, provider_id: str | None = None):
+
+        if self.workspace_factory is None:
+            self.last_error = "azure-quantum is not installed"
+            return False
+
+        missing = [
+            name
+            for name, value in {
+                "subscription_id": self.subscription_id,
+                "resource_group": self.resource_group,
+                "workspace_name": self.workspace_name,
+                "location": self.location,
+            }.items()
+            if not value
+        ]
+        if missing:
+            self.last_error = f"Missing Azure Quantum configuration: {', '.join(missing)}"
+            return False
+
+        try:
+            self.workspace = self.workspace_factory(
+                subscription_id=self.subscription_id,
+                resource_group=self.resource_group,
+                name=self.workspace_name,
+                location=self.location,
+            )
+            target_name = target_name or self.default_target_name
+            provider_id = provider_id or self.default_provider_id
+            if target_name:
+                self.select_target(target_name, provider_id)
+            self.connected = True
+            self.last_error = None
+            return True
+        except Exception as error:
+            self.workspace = None
+            self.connected = False
+            self.last_error = str(error)
+            return False
+
+    def select_target(self, target_name: str, provider_id: str | None = None):
+        if self.workspace is None:
+            raise RuntimeError("Connect to Azure Quantum before selecting a target")
+
+        targets = self.workspace.get_targets(
+            name=target_name,
+            provider_id=provider_id,
+        )
+        if isinstance(targets, (list, tuple)):
+            if not targets:
+                raise LookupError(f"Azure Quantum target not found: {target_name}")
+            self.target = targets[0]
+        else:
+            self.target = targets
+        self.target_name = target_name
+        self.provider_id = provider_id
+        return self.target
+
+    def submit(self, input_data: str, **kwargs):
+        if self.target is None:
+            raise RuntimeError("Select an Azure Quantum target before submitting a job")
+        return self.target.submit(input_data=input_data, **kwargs)
+
+    def get_job(self, job_id: str):
+        if self.workspace is None:
+            raise RuntimeError("Connect to Azure Quantum before retrieving a job")
+        return self.workspace.get_job(job_id)
+
+
+    def status(self):
+
+        return {
+            "azure_available": AZURE_AVAILABLE,
+            "connected": self.connected,
+            "target": self.target_name,
+            "provider_id": self.provider_id,
+            "last_error": self.last_error,
+        }
+from quantum.azure_bridge import AzureBridge
+
+
+class AzureSEFIJob:
+    """
+    Azure Quantum submission wrapper.
+    """
+
+    def __init__(self, bridge=None, target_name=None, provider_id=None, shots=100):
+
+        self.bridge = bridge or AzureBridge()
+        self.target_name = target_name
+        self.provider_id = provider_id
+        self.shots = shots
+        self.job = None
+
+    def connect(self):
+
+        return self.bridge.connect(self.target_name, self.provider_id)
+
+    def status(self):
+
+        return self.bridge.status()
+
+    def submit_register(self, register, name="sefi-qec-job", shots=None):
+
+        if len(register.bits) != 20:
+            raise ValueError("SEFI Azure jobs require a 20-bit register")
+
+        if not self.bridge.connected:
+            raise RuntimeError("Connect to Azure Quantum before submitting a register")
+
+        if self.bridge.target is None:
+            raise RuntimeError("Select an Azure Quantum target before submitting a register")
+
+        qasm = self._register_to_qasm(register.bits)
+        self.job = self.bridge.submit(
+            qasm,
+            name=name,
+            shots=shots or self.shots,
+            input_data_format="qasm",
+        )
+        return self.job_info()
+
+    def job_info(self):
+
+        if self.job is None:
+            return {"submitted": False, "status": "not_submitted"}
+
+        job_id = getattr(self.job, "id", None)
+        status = self.job.get_status() if hasattr(self.job, "get_status") else "submitted"
+        return {
+            "submitted": True,
+            "job_id": job_id,
+            "status": status,
+        }
+
+    def refresh(self):
+
+        if self.job is None:
+            raise RuntimeError("No Azure Quantum job has been submitted")
+        job_id = getattr(self.job, "id", None)
+        self.job = self.bridge.get_job(job_id)
+        return self.job_info()
+
+    def result(self):
+
+        if self.job is None:
+            raise RuntimeError("No Azure Quantum job has been submitted")
+        return self.job.get_results()
+
+    def cancel(self):
+
+        if self.job is None:
+            raise RuntimeError("No Azure Quantum job has been submitted")
+        self.job.cancel()
+        return self.job_info()
+
+    @staticmethod
+    def _register_to_qasm(bits):
+
+        lines = [
+            "OPENQASM 2.0;",
+            'include "qelib1.inc";',
+            "qreg q[20];",
+            "creg c[20];",
+        ]
+        lines.extend(f"x q[{index}];" for index, bit in enumerate(bits) if bit)
+        lines.extend(f"measure q[{index}] -> c[{index}];" for index in range(20))
+        return "\n".join(lines)
+from quantum.phi_state import phi_to_bitlist
+from quantum.registers import SEFI_REGISTER_SIZE
+
+
+class SEFICircuit:
+    """
+    Quantum-ready representation of a SEFI identity state.
+
+    This is intentionally backend-neutral so it can later target:
+        - Azure Quantum
+        - Qiskit
+        - Q#
+        - Resource Estimator
+    """
+
+    def __init__(self, bits):
+        if len(bits) != SEFI_REGISTER_SIZE:
+            raise ValueError(
+                f"Expected {SEFI_REGISTER_SIZE} bits, got {len(bits)}"
+            )
+
+        self.bits = bits
+
+    def syndrome(self):
+        """
+        Placeholder syndrome extraction.
+
+        Returns positions of logical 1s.
+        """
+
+        return [i for i, bit in enumerate(self.bits) if bit == 1]
+
+    def parity(self):
+        """
+        Simple parity check.
+        """
+
+        return sum(self.bits) % 2
+
+    def register_view(self):
+        """
+        Human-readable register layout.
+        """
+
+        return {
+            "origin": self.bits[0:4],
+            "authorship": self.bits[4:8],
+            "sovereignty": self.bits[8:12],
+            "warp": self.bits[12:16],
+            "metric": self.bits[16:20],
+        }
+
+
+def build_circuit(phi):
+    """
+    Build a SEFI logical circuit representation from Phi.
+    """
+
+    bits = phi_to_bitlist(phi)
+
+    return SEFICircuit(bits)
+from core.identity_types import Phi
+
+
+class SEFIDecoder:
+
+    def decode(self, bits):
+
+        if len(bits) != 20:
+            raise ValueError(
+                "SEFI register must contain 20 bits."
+            )
+
+        def decode_field(chunk):
+
+            value = int(
+                "".join(str(x) for x in chunk),
+                2
+            )
+
+            if value > 9:
+                value = 0
+
+            return str(value)
+
+        return Phi(
+            origin=decode_field(bits[0:4]),
+            authorship=decode_field(bits[4:8]),
+            sovereignty=decode_field(bits[8:12]),
+            warp=decode_field(bits[12:16]),
+            metric=decode_field(bits[16:20]),
+        )
+from quantum.phi_state import phi_to_bitlist
+
+
+class SEFIEncoder:
+
+    def encode(self, phi):
+
+        return phi_to_bitlist(phi)
+from quantum.geometry_syndrome import geometry_syndrome
+from quantum.sovereignty_surface import within_surface
+
+
+class GeometricStabilizer:
+    """
+    Geometric SEFI stabilizer.
+    """
+
+    def evaluate(self, phi):
+
+        return {
+            "inside_surface": within_surface(phi),
+            "geometry_syndrome": geometry_syndrome(phi),
+        }
+
+    def valid(self, phi):
+
+        syndrome = geometry_syndrome(phi)
+
+        return (
+            within_surface(phi)
+            and len(syndrome) == 0
+        )def geometry_syndrome(phi):
+
+    syndrome = []
+
+    if not (0 <= float(phi.x) <= 100):
+        syndrome.append("X_DRIFT")
+
+    if not (0 <= float(phi.y) <= 100):
+        syndrome.append("Y_DRIFT")
+
+    if not (0 <= float(phi.z) <= 100):
+        syndrome.append("Z_DRIFT")
+
+    return syndrome
+class LogicalErrorRate:
+
+    def calculate(
+        self,
+        total_trials,
+        logical_failures
+    ):
+
+        if total_trials == 0:
+            return 0.0
+
+        return logical_failures / total_trials
+from quantum.logical_register import LogicalPhiRegister
+
+
+class LogicalLattice:
+    """
+    Logical qubit lattice for SEFI/GWFM states.
+    """
+
+    def __init__(self, register: LogicalPhiRegister):
+        self.register = register
+
+    def logical_distance(self):
+
+        return len(self.register.bits)
+
+    def weight(self):
+
+        return sum(self.register.bits)
+
+    def density(self):
+
+        if len(self.register.bits) == 0:
+            return 0.0
+
+        return self.weight() / len(self.register.bits)
+
+    def snapshot(self):
+
+        return {
+            "distance": self.logical_distance(),
+            "weight": self.weight(),
+            "density": self.density(),
+        }
+from quantum.phi_state import phi_to_bitlist
+
+
+class LogicalPhiRegister:
+
+    def __init__(self, phi):
+
+        self.phi = phi
+        self.bits = phi_to_bitlist(phi)
+
+    @property
+    def size(self):
+
+        return len(self.bits)
+
+    def get(self, index):
+
+        return self.bits[index]
+
+    def set(self, index, value):
+
+        self.bits[index] = int(value)
+
+    def snapshot(self):
+
+        return self.bits.copy()
+``
+import random
+
+
+def bit_flip(bits, p=0.05):
+    """
+    X error channel.
+    """
+
+    out = bits.copy()
+
+    for i in range(len(out)):
+        if random.random() < p:
+            out[i] ^= 1
+
+    return out
+
+
+def phase_flip(bits, p=0.05):
+    """
+    Placeholder Z channel.
+
+    Recorded as metadata until
+    full state-vector simulation exists.
+    """
+
+    return bits.copy()
+
+
+def depolarizing(bits, p=0.05):
+    """
+    Simple depolarizing channel.
+    """
+
+    out = bits.copy()
+
+    for i in range(len(out)):
+        if random.random() < p:
+            out[i] = random.choice([0, 1])
+
+    return out
+from codec.sefi_codec import encode
+
+
+def phi_to_bitlist(phi):
+    """
+    Convert Phi to a 20-bit quantum-ready register.
+    """
+
+    encoded = encode(phi)
+
+    encoded = encoded.replace("|", "")
+
+    return [int(bit) for bit in encoded]
+from quantum.logical_register import LogicalPhiRegister
+from quantum.sefi_stabilizers import (
+    authorship_stabilizer,
+    metric_stabilizer,
+    origin_stabilizer,
+    sovereignty_stabilizer,
+    warp_stabilizer,
+)
+from quantum.stabilizer_code import SEFIStabilizerCode
+
+
+def build_quantum_pipeline(phi):
+
+    register = LogicalPhiRegister(phi)
+
+    code = SEFIStabilizerCode()
+
+    code.add(
+        "origin",
+        origin_stabilizer
+    )
+
+    code.add(
+        "authorship",
+        authorship_stabilizer
+    )
+
+    code.add(
+        "sovereignty",
+        sovereignty_stabilizer
+    )
+
+    code.add(
+        "warp",
+        warp_stabilizer
+    )
+
+    code.add(
+        "metric",
+        metric_stabilizer
+    )
+
+    return {
+        "register": register,
+        "syndrome": code.evaluate(register),
+    }
+def recover(tx_bits, rx_bits):
+    """
+    Perfect recovery for simulation.
+
+    Later replaced by:
+        stabilizer syndromes
+        logical recovery circuits
+        Azure execution results
+    """
+
+    corrected = rx_bits.copy()
+
+    for i in range(len(tx_bits)):
+
+        if tx_bits[i] != corrected[i]:
+            corrected[i] = tx_bits[i]
+
+    return corrected
+SEFI_REGISTER_SIZE = 20
+
+REGISTER_MAP = {
+    "origin": (0, 3),
+    "authorship": (4, 7),
+    "sovereignty": (8, 11),
+    "warp": (12, 15),
+    "metric": (16,
+class ResourceEstimate:
+
+    def __init__(
+        self,
+        logical_qubits,
+        stabilizers,
+        syndrome_qubits
+    ):
+        self.logical_qubits = logical_qubits
+        self.stabilizers = stabilizers
+        self.syndrome_qubits = syndrome_qubits
+
+    def summary(self):
+
+        return {
+            "logical_qubits": self.logical_qubits,
+            "stabilizers": self.stabilizers,
+            "syndrome_qubits": self.syndrome_qubits,
+            "total_qubits":
+                self.logical_qubits +
+                self.syndrome_qubits
+        }
+
+
+def estimate_sefi():
+
+    return ResourceEstimate(
+        logical_qubits=20,
+        stabilizers=5,
+        syndrome_qubits=5,
+    )
+class SEFIResourceModel:
+
+    def __init__(
+        self,
+        logical_qubits=20,
+        stabilizers=5,
+        syndrome_qubits=5
+    ):
+
+        self.logical_qubits = logical_qubits
+        self.stabilizers = stabilizers
+        self.syndrome_qubits = syndrome_qubits
+
+    @property
+    def total_qubits(self):
+
+        return (
+            self.logical_qubits +
+            self.syndrome_qubits
+        )
+
+    def report(self):
+
+        return {
+            "logical_qubits": self.logical_qubits,
+            "stabilizers": self.stabilizers,
+            "syndrome_qubits": self.syndrome_qubits,
+            "total_qubits": self.total_qubits,
+        }
+from quantum.encoder import SEFIEncoder
+from quantum.decoder import SEFIDecoder
+from quantum.syndrome_extractor import SyndromeExtractor
+
+
+class SEFICode:
+
+    def __init__(self):
+
+        self.encoder = SEFIEncoder()
+        self.decoder = SEFIDecoder()
+        self.syndrome = SyndromeExtractor()
+
+    def encode(self, phi):
+
+        return self.encoder.encode(phi)
+
+    def decode(self, bits):
+
+        return self.decoder.decode(bits)
+
+    def syndrome_extract(
+        self,
+        tx,
+        rx
+    ):
+
+        return self.syndrome.extract(tx, rx)
+def origin_stabilizer(register):
+
+    return sum(register.bits[0:4]) >= 0
+
+
+def authorship_stabilizer(register):
+
+    return sum(register.bits[4:8]) >= 0
+
+
+def sovereignty_stabilizer(register):
+
+    return sum(register.bits[8:12]) >= 0
+
+
+def warp_stabilizer(register):
+
+    return sum(register.bits[12:16]) >= 0
+
+
+def metric_stabilizer(register):
+
+    return sum(register.bits[16:20]) >= 0
+import math
+
+
+def sovereignty_distance(phi):
+
+    return math.sqrt(
+        phi.x**2 +
+        phi.y**2 +
+        phi.z**2
+    )
+
+
+def within_surf**e(
+    phi,
+    radius=100.0
+):
+
+**  return sovereignty_distance(phi**<= radius
+class SEFIStabilizerCode:
+
+    def __init__(self):
+
+        self.stabilizers = []
+
+    def add(self, name, check):
+
+        self.stabilizers.append(
+            {
+                "name": name,
+                "check": check,
+            }
+        )
+
+    def evaluate(self, register):
+
+        results = {}
+
+        for stabilizer in self.stabilizers:
+
+            results[stabilizer["name"]] = (
+                stabilizerregister
+            )
+
+        return results
+class SyndromeExtractor:
+
+    def extract(
+        self,
+        transmitted,
+        received
+    ):
+
+        syndrome = []
+
+        for i in range(len(transmitted)):
+
+            if transmitted[i] != receivedsyndrome.append(i)
+
+        return syndrome
+class SEFISyndrome:
+    """
+    Quantum syndrome container.
+    """
+
+    def __init__(self, error_positions):
+        self.error_positions = error_positions
+
+    def weight(self):
+        return len(self.error_positions)
+
+    def has_error(self):
+        return self.weight() > 0
+
+
+def detect(tx_bits, rx_bits):
+
+    errors = []
+
+    for i, (a, b) in enumerate(zip(tx_bits, rx_bits)):
+
+        if a != b:
+            errors.append(i)
+
+    return SEFISyndrome(errors)
+class WorldlineRegister:
+    """
+    Quantum-side representation
+    of GWFM worldline information.
+    """
+
+    def __init__(self, phi):
+
+        self.x = phi.x
+        self.y = phi.y
+        self.z = phi.z
+
+        self.vx = phi.vx
+        self.vy = phi.vy
+        self.vz = phi.vz
+
+    def position(self):
+
+        return (
+            self.x,
+            self.y,
+            self.z,
+        )
+
+    def velocity(self):
+
+        return (
+            self.vx,
+            self.vy,
+            self.vz,
+        )
+
+    def state(self):
+
+        return {
+            "position": self.position(),
+            "velocity": self.velocity(),
+        }
+def check_consistency(Phi_original, Phi_corr):
+    """
+    Reconstruction consistency:
+    counts how many invariants match.
+    """
+    matches = 0
+    for field in ["origin", "authorship", "sovereignty", "warp", "metric"]:
+        if getattr(Phi_original, field) == getattr(Phi_corr, field):
+            matches += 1
+    return matches
+# stabilizer/stabilizer.py
+
+from typing import Any, List
+
+class StabilizerGenerator:
+    """
+    SEFI/GWFM stabilizer generator.
+    Represents a constraint operator tied to geometric identity types.
+    """
+    def __init__(self, name: str, operator: Any) -> None:
+        self.name = name
+        self.operator = operator  # Pauli or geometric operator
+
+
+class StabilizerModel:
+    """
+    Geometric stabilizer structure for SEFI QEC Stack.
+    Provides constraint checks, syndrome evaluation, and
+    integration points for reconstruction and fidelity modules.
+    """
+    def __init__(self, generators: List[StabilizerGenerator]) -> None:
+        self.generators = generators
+
+    def check_constraints(self) -> bool:
+        """
+        Placeholder: verify commutation, independence, and
+        SEFI/GWFM geometric consistency.
+        """
+        # TODO: integrate with core/consistency.py and core/metric.py
+        return True
+
+    def syndrome(self, state: Any) -> Any:
+        """
+        Compute syndrome of a given state relative to stabilizer generators.
+        """
+        # TODO: bind to qec/ and reconstruct/ modules
+        raise NotImplementedError
+from core.identity_types import Phi
+
+from quantum.logical_register import LogicalPhiRegister
+from quantum.logical_lattice import LogicalLattice
+from quantum.worldline_register import WorldlineRegister
+from quantum.geometric_stabilizer import GeometricStabilizer
+
+
+def test_worldline_register():
+
+    phi = Phi(
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        x=1.0,
+        y=2.0,
+        z=3.0,
+        vx=4.0,
+        vy=5.0,
+        vz=6.0
+    )
+
+    reg = WorldlineRegister(phi)
+
+    assert reg.position() == (1.0, 2.0, 3.0)
+    assert reg.velocity() == (4.0, 5.0, 6.0)
+
+
+def test_logical_lattice():
+
+    phi = Phi(
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    )
+
+    reg = LogicalPhiRegister(phi)
+
+    lattice = LogicalLattice(reg)
+
+    assert lattice.logical_distance() == 20
+
+
+def test_geometric_stabilizer():
+
+    phi = Phi(
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        x=1.0,
+        y=1.0,
+        z=1.0
+    )
+
+    stabilizer = GeometricStabilizer()
+
+    result = stabilizer.evaluate(phi)
+
+    assert "inside_surface" in result
+    assert "geometry_syndrome" in result
+from core.identity_types import Phi
+from quantum.qec_pipeline import build_quantum_pipeline
+
+
+def test_quantum_pipeline():
+
+    phi = Phi(
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    )
+
+    result = build_quantum_pipeline(phi)
+
+    assert "register" in result
+    assert "syndrome" in result
+
+    assert len(result["syndrome"]) == 5
+from quantum.noise import bit_flip
+from quantum.syndrome import detect
+from quantum.recovery import recover
+
+
+def test_syndrome_detection():
+
+    tx = [0] * 20
+
+    rx = tx.copy()
+    rx[5] = 1
+
+    syndrome = detect(tx, rx)
+
+    assert syndrome.has_error()
+    assert syndrome.weight() == 1
+
+
+def test_recovery():
+
+    tx = [0] * 20
+
+    rx = tx.copy()
+    rx[3] = 1
+    rx[10] = 1
+
+    corrected = recover(tx, rx)
+
+    assert corrected == tx
+
+
+def test_bit_flip_preserves_length():
+
+    tx = [0] * 20
+
+    rx = bit_flip(tx, p=0.25)
+
+    assert len(rx) == 20
+from core.identity_types import Phi
+from quantum.circuits import build_circuit
+
+
+def test_build_quantum_circuit():
+
+    phi = Phi(
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    )
+
+    circuit = build_circuit(phi)
+
+    assert len(circuit.bits) == 20
+
+
+def test_register_view():
+
+    phi = Phi(
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    )
+
+    circuit = build_circuit(phi)
+
+    registers = circuit.register_view()
+
+    assert set(registers.keys()) == {
+        "origin",
+        "authorship",
+        "sovereignty",
+        "warp",
+        "metric"
+    }
+
+
+def test_parity():
+
+    phi = Phi(
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    )
+
+    circuit = build_circuit(phi)
+
+    assert circuit.parity() in (0, 1)
+from core.identity_types import Phi
+
+from quantum.sefi_code import SEFICode
+
+
+def test_sefi_code_roundtrip():
+
+    phi = Phi(
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    )
+
+    code = SEFICode()
+
+    encoded = code.encode(phi)
+
+    decoded = code.decode(encoded)
+
+    assert decoded.origin == "1"
+    assert decoded.authorship == "2"
+    assert decoded.sovereignty == "3"
+    assert decoded.warp == "4"
+    assert decoded.metric == "5"
+
+
+def test_syndrome_detection():
+
+    code = SEFICode()
+
+    tx = [0] * 20
+    rx = tx.copy()
+
+    rx[7] = 1
+
+    syndrome = code.syndrome_extract(
+        tx,
+        rx
+    )
+
+    assert syndrome == [7]
+from core.identity_types import Phi
+from qec.collapse import predict_collapse
+from stack import build_identity, decode, encode, sefi_qec_pipeline
+from transport.channel_models import (
+    break_sovereignty,
+    corrupt_authorship,
+    corrupt_metric,
+    corrupt_origin,
+    flip_warp,
+    no_noise,
+)
+from transport.worldline import propagate
+
+IDENTITY_FIELDS = {"origin", "authorship", "sovereignty", "warp", "metric"}
+
+
+def test_build_identity_creates_phi():
+    observables = {
+        "origin": "1",
+        "authorship": "2",
+        "sovereignty": "3",
+        "warp": "4",
+        "metric": "5",
+    }
+
+    phi = build_identity(observables)
+
+    assert isinstance(phi, Phi)
+    assert phi.origin == "1"
+    assert phi.authorship == "2"
+    assert phi.sovereignty == "3"
+    assert phi.warp == "4"
+    assert phi.metric == "5"
+
+
+def test_codec_round_trip_preserves_phi():
+    phi = Phi("1", "2", "3", "4", "5")
+
+    encoded = encode(phi)
+    decoded = decode(encoded)
+
+    assert decoded.origin == "1"
+    assert decoded.authorship == "2"
+    assert decoded.sovereignty == "3"
+    assert decoded.warp == "4"
+    assert decoded.metric == "5"
+
+
+def test_sefi_qec_pipeline_returns_result_mapping():
+    observables = {
+        "origin": "1",
+        "authorship": "2",
+        "sovereignty": "3",
+        "warp": "0",
+        "metric": "5",
+    }
+
+    result = sefi_qec_pipeline(observables, no_noise)
+
+    assert set(result) >= {
+        "Phi_original",
+        "Phi_propagated",
+        "Phi_rx",
+        "Phi_corr",
+        "bitstring_tx",
+        "fidelity",
+        "curvature_energy",
+        "collapse",
+        "consistency",
+    }
+    assert result["Phi_original"].origin == "1"
+    assert result["bitstring_tx"] == result["bitstring_tx"]
+
+
+def test_predict_collapse_threshold_logic():
+    assert predict_collapse(0.9, 20) is False
+    assert predict_collapse(0.2, 20) is True
+    assert predict_collapse(0.6, 2) is False
+
+
+def test_channel_models_noop_and_single_bit_flip():
+    original = encode(Phi("1", "2", "3", "4", "5"))
+
+    assert no_noise(original) == original
+    assert flip_warp(original) != original
+    assert flip_warp(original).split("|")[3] == "X"
+
+
+def test_channel_models_corruption_regressions():
+    original = encode(Phi("1", "2", "3", "4", "5"))
+
+    assert corrupt_origin(original) != original
+    assert corrupt_authorship(original) != original
+    assert corrupt_metric(original) != original
+    assert break_sovereignty(original) != original
+
+    decoded_origin = decode(corrupt_origin(original))
+    decoded_metric = decode(corrupt_metric(original))
+    decoded_sovereignty = decode(break_sovereignty(original))
+
+    assert decoded_origin.origin in {"0", "99"}
+    assert decoded_metric.metric in {"0", "X"}
+    assert decoded_sovereignty.sovereignty in {"0", "99"}
+
+
+def test_decode_handles_non_pipe_bitstrings_gracefully():
+    bitstring = "00010010001101000101"
+    decoded = decode(bitstring)
+
+    assert IDENTITY_FIELDS.issubset(decoded.__dict__)
+    assert decoded.origin == "1"
+    assert decoded.authorship == "2"
+    assert decoded.sovereignty == "3"
+    assert decoded.warp == "4"
+    assert decoded.metric == "5"
+
+
+def test_decode_handles_malformed_bit_lengths_gracefully():
+    bitstrings = [
+        "0001|0010|0011|01",
+        "0001001000110100",
+        "0001|0010|0011|0100|010",
+        "|",
+    ]
+
+    for bitstring in bitstrings:
+        decoded = decode(bitstring)
+        assert IDENTITY_FIELDS.issubset(decoded.__dict__)
+        assert all(getattr(decoded, field).isdigit() for field in IDENTITY_FIELDS)
+        assert int(decoded.origin) >= 0
+        assert int(decoded.authorship) >= 0
+        assert int(decoded.sovereignty) >= 0
+        assert int(decoded.warp) >= 0
+        assert int(decoded.metric) >= 0
+
+
+def test_decode_handles_invalid_field_values_gracefully():
+    invalid_bitstrings = [
+        "9999|9999|9999|9999|9999",
+        "1111|abcd|0110|1010|0011",
+        "zzzz|zzzz|zzzz|zzzz|zzzz",
+        "0001|0010|0011|0100|X",
+    ]
+
+    for bitstring in invalid_bitstrings:
+        decoded = decode(bitstring)
+        assert IDENTITY_FIELDS.issubset(decoded.__dict__)
+        assert all(getattr(decoded, field).isdigit() for field in IDENTITY_FIELDS)
+        assert int(decoded.origin) <= 9
+        assert int(decoded.authorship) <= 9
+        assert int(decoded.sovereignty) <= 9
+        assert int(decoded.warp) <= 9
+        assert int(decoded.metric) <= 9
+
+
+def test_pipeline_handles_channel_corruption_and_keeps_result_shape():
+    observables = {
+        "origin": "1",
+        "authorship": "2",
+        "sovereignty": "3",
+        "warp": "0",
+        "metric": "5",
+    }
+
+    for corruptor in (corrupt_origin, corrupt_metric, flip_warp, break_sovereignty):
+        result = sefi_qec_pipeline(observables, corruptor)
+
+        assert set(result) >= {
+            "Phi_original",
+            "Phi_propagated",
+            "Phi_rx",
+            "Phi_corr",
+            "bitstring_tx",
+            "fidelity",
+            "curvature_energy",
+            "collapse",
+            "consistency",
+        }
+        assert isinstance(result["fidelity"], float)
+        assert isinstance(result["consistency"], int)
+def test_worldline_propagation():
+
+    phi = Phi(
+        "1", "2", "3", "4", "5",
+        x=0.0,
+        y=0.0,
+        z=0.0,
+        vx=1.0,
+        vy=2.0,
+        vz=3.0
+    )
+
+    phi = propagate(phi)
+
+    assert phi.x == 1.0
+    assert phi.y == 2.0
+    assert phi.z == 3.0
+def apply_curvature(Phi, curvature=1):
+    """
+    Minimal curvature model:
+    - warp increases by curvature
+    - sovereignty bends upward
+    - metric shifts toward 1 (Lorentzian)
+    """
+    warp = str(int(Phi.warp) + curvature) if Phi.warp.isdigit() else Phi.warp
+    sovereignty = str(int(Phi.sovereignty) + curvature) if Phi.sovereignty.isdigit() else Phi.sovereignty
+
+    # metric moves toward 1
+    metric = "1" if Phi.metric != "1" else Phi.metric
+
+    from core.identity_types import Phi as PhiObj
+    return PhiObj(
+        origin=Phi.origin,
+        authorship=Phi.authorship,
+        sovereignty=sovereignty,
+        warp=warp,
+        metric=metric
+    )
+# transport/curvature.py
+
+import math
+
+def calculate_curvature(v, a):
+
+    vx, vy, vz = v
+    ax, ay, az = a
+
+    cross = (
+        vy*az - vz*ay,
+        vz*ax - vx*az,
+        vx*ay - vy*ax
+    )
+
+    cross_mag = math.sqrt(sum(c*c for c in cross))
+
+    v_mag = math.sqrt(
+        vx*vx +
+        vy*vy +
+        vz*vz
+    )
+
+    if v_mag == 0:
+        return 0.0
+
+    return cross_mag / (v_mag ** 3)
+def propagate(Phi, dt=1.0):
+    """
+    GWFM worldline propagation.
+    """
+
+    Phi.x += Phi.vx * dt
+    Phi.y += Phi.vy * dt
+    Phi.z += Phi.vz * dt
+
+    return Phi

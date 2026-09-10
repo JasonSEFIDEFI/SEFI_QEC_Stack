@@ -63,5 +63,36 @@ from qec_stack.decoders import majority_vote
 License
 MIT License.
 
+Azure Quantum
+-------------
+Install the optional Azure integration with:
+
+    pip install -e ".[azure]"
+
+Set these workspace variables before running an Azure job:
+
+    AZURE_QUANTUM_SUBSCRIPTION_ID
+    AZURE_QUANTUM_RESOURCE_GROUP
+    AZURE_QUANTUM_WORKSPACE_NAME
+    AZURE_QUANTUM_LOCATION
+    AZURE_QUANTUM_TARGET
+    AZURE_QUANTUM_PROVIDER_ID (optional)
+
+Authenticate through the standard Azure credential chain, for example with
+`az login`. The Python integration generates a 20-qubit OpenQASM circuit and
+supports submission, status refresh, result retrieval, and cancellation:
+
+    from quantum.azure_job import AzureSEFIJob
+    from quantum.circuits import build_circuit
+
+    job = AzureSEFIJob()
+    job.connect()
+    job.submit_register(build_circuit(phi))
+    job.refresh()
+    results = job.result()
+
+The Q# source files are under `quantum/qsharp/` and are included as package
+data for downstream QDK workflows.
+
 Status
 Active development as part of the SEFI and GWFM research platform.

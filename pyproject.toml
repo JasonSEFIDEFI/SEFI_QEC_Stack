@@ -6,6 +6,12 @@ authors = [{ name = "Jason Dutton", email = "SEFIDEFI@OUTLOOK.COM" }]
 license = "MIT"
 requires-python = ">=3.10"
 
+[project.optional-dependencies]
+azure = ["azure-quantum>=1.0"]
+
+[tool.setuptools.package-data]
+quantum = ["qsharp/*.qs"]
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"

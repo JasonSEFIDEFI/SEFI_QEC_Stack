@@ -9,6 +9,9 @@ from transport.channel_models import (
     flip_warp,
     no_noise,
 )
+from transport.worldline import propagate
+
+IDENTITY_FIELDS = {"origin", "authorship", "sovereignty", "warp", "metric"}
 
 
 def test_build_identity_creates_phi():
@@ -104,7 +107,7 @@ def test_decode_handles_non_pipe_bitstrings_gracefully():
     bitstring = "00010010001101000101"
     decoded = decode(bitstring)
 
-    assert set(decoded.__dict__) == {"origin", "authorship", "sovereignty", "warp", "metric"}
+    assert IDENTITY_FIELDS.issubset(decoded.__dict__)
     assert decoded.origin == "1"
     assert decoded.authorship == "2"
     assert decoded.sovereignty == "3"
@@ -122,8 +125,8 @@ def test_decode_handles_malformed_bit_lengths_gracefully():
 
     for bitstring in bitstrings:
         decoded = decode(bitstring)
-        assert set(decoded.__dict__) == {"origin", "authorship", "sovereignty", "warp", "metric"}
-        assert all(value.isdigit() for value in decoded.__dict__.values())
+        assert IDENTITY_FIELDS.issubset(decoded.__dict__)
+        assert all(getattr(decoded, field).isdigit() for field in IDENTITY_FIELDS)
         assert int(decoded.origin) >= 0
         assert int(decoded.authorship) >= 0
         assert int(decoded.sovereignty) >= 0
@@ -141,8 +144,8 @@ def test_decode_handles_invalid_field_values_gracefully():
 
     for bitstring in invalid_bitstrings:
         decoded = decode(bitstring)
-        assert set(decoded.__dict__) == {"origin", "authorship", "sovereignty", "warp", "metric"}
-        assert all(value.isdigit() for value in decoded.__dict__.values())
+        assert IDENTITY_FIELDS.issubset(decoded.__dict__)
+        assert all(getattr(decoded, field).isdigit() for field in IDENTITY_FIELDS)
         assert int(decoded.origin) <= 9
         assert int(decoded.authorship) <= 9
         assert int(decoded.sovereignty) <= 9
@@ -175,3 +178,20 @@ def test_pipeline_handles_channel_corruption_and_keeps_result_shape():
         }
         assert isinstance(result["fidelity"], float)
         assert isinstance(result["consistency"], int)
+def test_worldline_propagation():
+
+    phi = Phi(
+        "1", "2", "3", "4", "5",
+        x=0.0,
+        y=0.0,
+        z=0.0,
+        vx=1.0,
+        vy=2.0,
+        vz=3.0
+    )
+
+    phi = propagate(phi)
+
+    assert phi.x == 1.0
+    assert phi.y == 2.0
+    assert phi.z == 3.0

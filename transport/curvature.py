@@ -19,3 +19,30 @@ def apply_curvature(Phi, curvature=1):
         warp=warp,
         metric=metric
     )
+# transport/curvature.py
+
+import math
+
+def calculate_curvature(v, a):
+
+    vx, vy, vz = v
+    ax, ay, az = a
+
+    cross = (
+        vy*az - vz*ay,
+        vz*ax - vx*az,
+        vx*ay - vy*ax
+    )
+
+    cross_mag = math.sqrt(sum(c*c for c in cross))
+
+    v_mag = math.sqrt(
+        vx*vx +
+        vy*vy +
+        vz*vz
+    )
+
+    if v_mag == 0:
+        return 0.0
+
+    return cross_mag / (v_mag ** 3)

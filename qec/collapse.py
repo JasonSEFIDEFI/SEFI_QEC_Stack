@@ -1,6 +1,6 @@
-def predict_collapse(fidelity_score, energy, threshold=0.5):
+def predict_collapse(fidelity_score: float, energy: float, threshold: float = 0.5) -> bool:
     """
     Predict collapse:
     collapse if fidelity < threshold and energy is high.
     """
-    return fidelity_score < threshold and energy > 10
+    return fidelity_score < threshold and energy > 10.0
