@@ -1,12 +1,81 @@
-MIT License
+SEFI_QEC_STACK Research License v1.0
 
-Copyright (c) 2026 Jason Dutton
+Copyright (c) 2026 Jason Duran Dutton
+SEFI Research Program
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so.
+Permission is hereby granted, free of charge, to any individual,
+researcher, educator, student, academic institution, government
+laboratory, or non-profit organization to use, copy, study, modify,
+publish, reproduce, and distribute this software and associated
+documentation files (the "Software") for research, educational,
+scientific, and other non-commercial purposes.
 
-The Software is provided “as is”, without warranty of any kind.
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+Attribution Requirements
+
+Any publications, derivative works, software distributions, technical
+reports, or research outputs making substantial use of the Software
+shall provide attribution to:
+
+Jason Duran Dutton
+SEFI Research Program
+
+Users are encouraged to cite any relevant SEFI, DEFI, GWFM, or quantum
+error correction manuscripts associated with the Software.
+
+Academic Freedom
+
+Nothing in this license shall restrict:
+
+- Independent verification or reproduction of results;
+- Scholarly criticism or review;
+- Academic publication;
+- Educational use;
+- Development of independent implementations based upon published ideas.
+
+Commercial Restrictions
+
+Commercial use of the Software is prohibited without prior written
+permission from the copyright holder.
+
+Commercial use includes, but is not limited to:
+
+- Selling the Software;
+- Selling derivative works of the Software;
+- Incorporating the Software into commercial products;
+- SaaS or cloud-hosted services utilizing the Software;
+- Proprietary redistribution;
+- Commercial licensing of modified versions.
+
+Derivative Works
+
+Derivative works must:
+
+- Preserve this license;
+- Clearly identify modifications;
+- Retain attribution to the original author;
+- Not imply endorsement by the original author.
+
+No Endorsement
+
+Use of the Software does not imply endorsement by Jason Duran Dutton
+or the SEFI Research Program.
+
+Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY
+CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Reservation of Rights
+
+All rights not expressly granted under this license are reserved by
+Jason Duran Dutton.
