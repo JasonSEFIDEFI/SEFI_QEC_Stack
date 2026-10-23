@@ -1,0 +1,106 @@
+[
+  {
+    "base_p": 0.05,
+    "shape": "smooth",
+    "shift": "none",
+    "calibration_shots": 10,
+    "method": "pooled",
+    "mean_exact_risk": 0.00040302567545507295,
+    "paired_delta_vs_independent": -4.2219167487769425e-05,
+    "paired_bootstrap_ci95": [
+      -7.679110510133865e-05,
+      -1.2079753582012625e-05
+    ]
+  },
+  {
+    "base_p": 0.05,
+    "shape": "smooth",
+    "shift": "none",
+    "calibration_shots": 10,
+    "method": "independent_jeffreys",
+    "mean_exact_risk": 0.0004452448429428424,
+    "paired_delta_vs_independent": 0.0,
+    "paired_bootstrap_ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "base_p": 0.05,
+    "shape": "smooth",
+    "shift": "none",
+    "calibration_shots": 10,
+    "method": "geometric_laplacian",
+    "mean_exact_risk": 0.00034882547548876726,
+    "paired_delta_vs_independent": -9.641936745407509e-05,
+    "paired_bootstrap_ci95": [
+      -0.00012828883269388423,
+      -6.882113843727838e-05
+    ]
+  },
+  {
+    "base_p": 0.05,
+    "shape": "smooth",
+    "shift": "none",
+    "calibration_shots": 10,
+    "method": "conventional_graph_regularization",
+    "mean_exact_risk": 0.00034882547548876726,
+    "paired_delta_vs_independent": -9.641936745407509e-05,
+    "paired_bootstrap_ci95": [
+      -0.00012828883269388423,
+      -6.882113843727838e-05
+    ]
+  },
+  {
+    "base_p": 0.05,
+    "shape": "alternating",
+    "shift": "none",
+    "calibration_shots": 10,
+    "method": "pooled",
+    "mean_exact_risk": 0.0021594660668086477,
+    "paired_delta_vs_independent": 0.0012585993955876301,
+    "paired_bootstrap_ci95": [
+      0.0011468379031515032,
+      0.0013522993953329135
+    ]
+  },
+  {
+    "base_p": 0.05,
+    "shape": "alternating",
+    "shift": "none",
+    "calibration_shots": 10,
+    "method": "independent_jeffreys",
+    "mean_exact_risk": 0.0009008666712210174,
+    "paired_delta_vs_independent": 0.0,
+    "paired_bootstrap_ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "base_p": 0.05,
+    "shape": "alternating",
+    "shift": "none",
+    "calibration_shots": 10,
+    "method": "geometric_laplacian",
+    "mean_exact_risk": 0.0021695579405346947,
+    "paired_delta_vs_independent": 0.0012686912693136772,
+    "paired_bootstrap_ci95": [
+      0.0011584090790056657,
+      0.001361869797090281
+    ]
+  },
+  {
+    "base_p": 0.05,
+    "shape": "alternating",
+    "shift": "none",
+    "calibration_shots": 10,
+    "method": "conventional_graph_regularization",
+    "mean_exact_risk": 0.0021695579405346947,
+    "paired_delta_vs_independent": 0.0012686912693136772,
+    "paired_bootstrap_ci95": [
+      0.0011584090790056657,
+      0.001361869797090281
+    ]
+  }
+]

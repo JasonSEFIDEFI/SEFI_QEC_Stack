@@ -1,0 +1,12 @@
+[
+  {
+    "suite": "qec",
+    "arrays_compared": 180,
+    "identical": true
+  },
+  {
+    "suite": "geometry",
+    "arrays_compared": 96,
+    "identical": true
+  }
+]

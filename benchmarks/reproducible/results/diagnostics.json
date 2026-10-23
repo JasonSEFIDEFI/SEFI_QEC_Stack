@@ -1,0 +1,26 @@
+{
+  "oracle_all_bits_restored": true,
+  "phase_flip_p1_unchanged": true,
+  "depolarizing_pauli_3qubit": [
+    {
+      "p": 0.001,
+      "logical_pauli_failure": 0.0019980008888888885
+    },
+    {
+      "p": 0.01,
+      "logical_pauli_failure": 0.019800888888888903
+    },
+    {
+      "p": 0.05,
+      "logical_pauli_failure": 0.0951111111111111
+    },
+    {
+      "p": 0.1,
+      "logical_pauli_failure": 0.18088888888888885
+    },
+    {
+      "p": 0.2,
+      "logical_pauli_failure": 0.3271111111111111
+    }
+  ]
+}

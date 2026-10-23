@@ -1,0 +1,44 @@
+[
+  {
+    "suite": "qec",
+    "exit_code": 0,
+    "tail": [
+      "30 passed in 2.18s"
+    ]
+  },
+  {
+    "suite": "core",
+    "exit_code": 0,
+    "tail": [
+      "33 passed in 4.87s"
+    ]
+  },
+  {
+    "suite": "evolution",
+    "exit_code": 0,
+    "tail": [
+      "46 passed in 56.71s"
+    ]
+  },
+  {
+    "suite": "bosonic",
+    "exit_code": 0,
+    "tail": [
+      "19 passed in 3.85s"
+    ]
+  },
+  {
+    "suite": "spherical",
+    "exit_code": 0,
+    "tail": [
+      "3 passed in 9.68s"
+    ]
+  },
+  {
+    "suite": "geometry",
+    "exit_code": 0,
+    "tail": [
+      "3 passed in 5.13s"
+    ]
+  }
+]

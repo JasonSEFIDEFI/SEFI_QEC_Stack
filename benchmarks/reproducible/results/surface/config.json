@@ -1,0 +1,30 @@
+{
+  "distances": [
+    3,
+    5,
+    7
+  ],
+  "probabilities": [
+    0.001,
+    0.003,
+    0.01
+  ],
+  "bases": [
+    "x",
+    "z"
+  ],
+  "models": [
+    "uniform",
+    "measurement_heavy"
+  ],
+  "seeds": [
+    501,
+    502,
+    503
+  ],
+  "shots_per_seed": 10000,
+  "temporal_weight_factors": [
+    0.5,
+    2.0
+  ]
+}

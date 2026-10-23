@@ -1,0 +1,488 @@
+[
+  {
+    "path": "codec/__init__.py",
+    "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "codec/compress.py",
+    "sha256": "0ad04075598513690cba35be536956557f7b5b40a1335bbc5d1c219515f712af",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "codec/sefi_codec.py",
+    "sha256": "7256bce9334d22778a2a36e673df50822b318b62e3b5ba53066b0162cf064c07",
+    "imports": [
+      "codec.compress",
+      "core.identity_types"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "core/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "core/geometry.py",
+    "sha256": "4ce8e0c16a76cac706f3328ea2cd78ae30881c174383244875283b6d4cc9ce24",
+    "imports": [
+      "dataclasses"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "core/identity_types.py",
+    "sha256": "a4412dd45341d969af8d47d0f4855aaa728324321022a8fa404384173c686915",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "fidelity/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "fidelity/fidelity.py",
+    "sha256": "a9913b382e52b87b898c424aad59f10c5c526f3dce31f875ee1f26852237d6ea",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "Logging/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "Logging/geolog.py",
+    "sha256": "70a2b5f357747978e52e707c12445c63d6b089846eeb9ff121a041da2d0acfe0",
+    "imports": [
+      "time"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "qec/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "qec/authorship.py",
+    "sha256": "a9db0ccb271e9bb8201a7c4f50e7b22765c8bffca5617b7ea1697d286d997ca3",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "qec/collapse.py",
+    "sha256": "f1e9c03232d8e89776939deebfc3b594ada3338964b1930a2e111c7476af11fc",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "qec/fidelity.py",
+    "sha256": "99f636ff09918efb40294267594a3038a56e58fa9d8fd4e505179c4b91639940",
+    "imports": [
+      "core.identity_types"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "qec/metric.py",
+    "sha256": "127c60554049d60154e7913318fe685eea1026960def6434a9d279d68bc3d904",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "qec/origin.py",
+    "sha256": "00cda8f8ecf37bbb3c0de90373025c0a8622a4d7aca9716f058bf6c0f33abda2",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "qec/sovereignty.py",
+    "sha256": "96d62fd9825754b1d23d6f92f3b4701316d7f67c19b92336b0db4c293e4ebbcd",
+    "imports": [
+      "quantum.sovereignty_surface"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "qec/stabilizer.py",
+    "sha256": "6757341e430317858972764f302311444db87a4a13639bf4f34a6c5d6fa204f6",
+    "imports": [
+      "core.identity_types",
+      "qec.authorship",
+      "qec.metric",
+      "qec.origin",
+      "qec.sovereignty"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "qec/syndrome.py",
+    "sha256": "3b3e9f01301535d36f99af2e9c20c75ae4842d2b51eabae406476d1be8bcf417",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "qec/warp_metric.py",
+    "sha256": "c13656060e172becd8dfb3d4fbba3b4fbe05d0543544c219fac75d99143ddee7",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/azure_bridge.py",
+    "sha256": "f99a9cff187345c4f3a0ffb5c2d52429a1b351d2be5ed2c11eff52907da89d2d",
+    "imports": [
+      "azure.quantum",
+      "os",
+      "typing"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/azure_job.py",
+    "sha256": "63aca853c199597de487a833ac990fdc8c7f2944f0af04f89ced515823cb3947",
+    "imports": [
+      "quantum.azure_bridge"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/azure_qec.py",
+    "sha256": "decc9bbef6449e4126f1e7c49414483438c724630bb3b8a667d172e0b77f9c1b",
+    "imports": [
+      "core.identity_types",
+      "fidelity.fidelity",
+      "qec.collapse",
+      "qec.warp_metric",
+      "quantum.azure_job",
+      "quantum.decoder",
+      "quantum.encoder"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/circuits.py",
+    "sha256": "9c3b06e1bff42715beb6fb204baa1efcc8cc7bdeaa90c3a023f23ddb34393390",
+    "imports": [
+      "quantum.phi_state",
+      "quantum.registers"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/decoder.py",
+    "sha256": "f5fc219f97ac38abb384f4ce61cd431b33cc81a58365e77c618fcabcca9b9463",
+    "imports": [
+      "core.identity_types"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/encoder.py",
+    "sha256": "416b0ffd420e618ce2f4ec05acdf829d9e96c7e37673aea804f01b2ba876f491",
+    "imports": [
+      "quantum.phi_state"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/geometric_stabilizer.py",
+    "sha256": "d808a7305bc8f59f84ddf89656b05fd096f036d53413eb46e83c4f486dea632b",
+    "imports": [
+      "quantum.geometry_syndrome",
+      "quantum.sovereignty_surface"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/geometry_syndrome.py",
+    "sha256": "0455003cfb5bbc2a4591eb6ce7b0f7e99a1bd2b30af47c80adefc502f72916ce",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/logical_error_rate.py",
+    "sha256": "e48c6ba3af1ce7db001de7c155208c69fc9bf6ff86111ee77bbb7374ef2be460",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/logical_lattice.py",
+    "sha256": "06265afc4ce976b3b05cb22178eaf46b8be88028f78891688c7e00933dc1b312",
+    "imports": [
+      "quantum.logical_register"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/logical_register.py",
+    "sha256": "d34b39e573f0e071036232c92e4bc33803c6c2b51769fe599c1784b80f66ecde",
+    "imports": [
+      "quantum.phi_state"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/noise.py",
+    "sha256": "e8d511e6e33a9aca595093f783eea29fb8e818e677b4685029296c8f060d51c3",
+    "imports": [
+      "random",
+      "typing"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/phi_state.py",
+    "sha256": "8904b1de350fce540892542141afd98d5004efca1b3632187a944d6f303854ef",
+    "imports": [
+      "codec.sefi_codec"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/qec_pipeline.py",
+    "sha256": "d1c060662e6acc2080b713b95d2d95b5ef93b3713fd36649725e62714e8a33ba",
+    "imports": [
+      "core.identity_types",
+      "fidelity.fidelity",
+      "qec.collapse",
+      "qec.warp_metric",
+      "quantum.decoder",
+      "quantum.encoder",
+      "quantum.logical_register",
+      "quantum.noise",
+      "quantum.self_stabilizers",
+      "quantum.stabilizer_code",
+      "quantum.syndrome_extractor"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/recovery.py",
+    "sha256": "93e23f30037eee0cd17bb4bab1f3ea8ce27537fef85a4bde345aaed295748f67",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/registers.py",
+    "sha256": "785bd3faf8af9b8df8335fd10a2ed7866bf211491e3ca27bc16d9ede36f675f0",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/resource_estimator.py",
+    "sha256": "028940f7fa4f8ac052beae593588baf4508df458bb34ab5ef5f869a49c251e13",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/resource_model.py",
+    "sha256": "bd30d6ee62f53b08a59ecabba95eb54aac4b1adf9b4565950420b8a6e220fef5",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/sefi_code.py",
+    "sha256": "b37aaa7964b6ffd2d3d9b2ae0c223a28d7811d9b8dcaac2f0c3f33c913d47e13",
+    "imports": [
+      "quantum.decoder",
+      "quantum.encoder",
+      "quantum.syndrome_extractor"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/self_stabilizers.py",
+    "sha256": "526d05fabe5c1418bc4ff1b5bd8094694dfb90ebfd74ea732673cb6ebaef367b",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/sovereignty_surface.py",
+    "sha256": "d6e32ac9b0712c492f13b059117f4047decdd0b6890b981061407f3165720efa",
+    "imports": [
+      "core.identity_types",
+      "math"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/stabilizer_code.py",
+    "sha256": "b7157366f14ff17498f89b0366fea7075d42c4c5afa7b22b3fd83db241dceccb",
+    "imports": [
+      "quantum.logical_register",
+      "typing"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/syndrome.py",
+    "sha256": "0e7740c7d72cc34021d80ef39df0d7a78922826d5f9530f926e7fbb2135159a2",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/syndrome_extractor.py",
+    "sha256": "2aeba6f06e5a1f7523239a374994b478d9b730e9436fd80788559cf71d83db8f",
+    "imports": [
+      "typing"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "quantum/worldline_register.py",
+    "sha256": "2d15b362be877fd01752bda5b509e8bc00c501bd05c0b8c19181c03278361ae5",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "reconstruct/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "reconstruct/consistency.py",
+    "sha256": "21b4e72cb9f4f9045d8b0b867ee74d032d3fb6d5e35336e8b197d1a3fdea98f3",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "stabilizer/stabilizer.py",
+    "sha256": "4610740c526b2828f127db4ac30836dfaddd529264a1475604f55b1b73acc1e9",
+    "imports": [
+      "typing"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "stack.py",
+    "sha256": "8ceb9865abf2a0da33075085f63836fb494f6bf3681be8d44b7d28820e434837",
+    "imports": [
+      "Logging.geolog",
+      "codec.sefi_codec",
+      "core.identity_types",
+      "fidelity.fidelity",
+      "qec.collapse",
+      "qec.stabilizer",
+      "qec.warp_metric",
+      "reconstruct.consistency",
+      "transport.channel_models",
+      "transport.worldline"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "tests/test_azure_integration.py",
+    "sha256": "36b3843d7fa16f0973c13d3030cdd0c41717d69854c9fa5822612b038da2ff45",
+    "imports": [
+      "core.identity_types",
+      "quantum.azure_bridge",
+      "quantum.azure_job",
+      "quantum.azure_qec"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "tests/test_geometric_qec.py",
+    "sha256": "c85cbf2368d370872519b355e7c3f1f90a8c272874a107b96c13c53748fd0556",
+    "imports": [
+      "core.identity_types",
+      "quantum.geometric_stabilizer",
+      "quantum.logical_lattice",
+      "quantum.logical_register",
+      "quantum.worldline_register"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "tests/test_logical_qec.py",
+    "sha256": "7772e0a30561bd26e1c4b05f2d1e2053728b2cc0a2a27d88ede49882fbfcef03",
+    "imports": [
+      "core.identity_types",
+      "quantum.qec_pipeline"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "tests/test_quantum.py",
+    "sha256": "a741300c3f5df027ffd6702e28e30ed736623e5adb49919653e1cdba9611c369",
+    "imports": [
+      "core.identity_types",
+      "quantum.circuits"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "tests/test_quantum_noise.py",
+    "sha256": "aa02b35453f4d2d80651875213bd941c6989678a061c23d3a88edd464f2e3da9",
+    "imports": [
+      "quantum.noise",
+      "quantum.recovery",
+      "quantum.syndrome"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "tests/test_sefi_code.py",
+    "sha256": "e1fddefe623d58910fb5b5dfd5c39959c0626a55cd87cbbcc6bd4e1dd3074373",
+    "imports": [
+      "core.identity_types",
+      "quantum.sefi_code"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "tests/test_stack.py",
+    "sha256": "48c6a90f81e9296885b83d010df8ee22a6d1a62e3d99e45e90d8ce99eb2f6506",
+    "imports": [
+      "core.identity_types",
+      "qec.collapse",
+      "stack",
+      "transport.channel_models",
+      "transport.worldline"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "transport/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "transport/channel_models.py",
+    "sha256": "91c930d884e8c876ac9a0e9e650307915fb91c2d290bcbbe625f7f9db5d8d66b",
+    "imports": [],
+    "parse_error": null
+  },
+  {
+    "path": "transport/curvature.py",
+    "sha256": "ad9c18226b10687b33aad3ab9ea20b855a4544a159c2253f8efdecbbd467fc2c",
+    "imports": [
+      "core.identity_types",
+      "math"
+    ],
+    "parse_error": null
+  },
+  {
+    "path": "transport/worldline.py",
+    "sha256": "eabbe0f9b4f03463f0f90ade6909877f0f65e1008b91505940b14b05d36bf9ae",
+    "imports": [],
+    "parse_error": null
+  }
+]

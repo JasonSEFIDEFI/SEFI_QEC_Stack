@@ -1,0 +1,8 @@
+{
+  "initial_git_clone": "Sandbox DNS restriction; succeeded with expanded permissions.",
+  "evolution_tests": "Initial sandbox run: 11 failures, 35 passes, 2 errors due to temporary-directory permissions. Workspace temp rerun: 4 failures, 42 passes due to loopback restrictions. Final expanded-permission run: all 46 passed.",
+  "spherical_test_invocation": "One requested test filename did not exist, so that invocation ran zero tests; corrected invocation passed all three existing curvature tests.",
+  "environment_setup": "Two imports attempted before optional installation finished failed; surface suite subsequently ran after installation.",
+  "v_sync": "Upstream additions collided with stashed local files; differing local versions and conflict copies retained beside repositories; all seven upstream comparisons ended at 0 ahead/0 behind, no unresolved conflicts.",
+  "scientific_negative_results": "Geometric weighting did not beat calibrated conventional equivalents; arbitrary metric weights and inaccurate normal frames can worsen recovery. No hardware run or empirical foundational validation."
+}

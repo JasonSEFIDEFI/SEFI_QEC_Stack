@@ -1,0 +1,3422 @@
+[
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.9980000000000003e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0057964000006904826,
+    "decode_shots_per_second": 10351252.500319619,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.9980000000000003e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.023458599996956764,
+    "decode_shots_per_second": 2557697.390627901,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.9980000000000003e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.005523499996343162,
+    "decode_shots_per_second": 10862677.65723238,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 54,
+    "rate": 0.0009,
+    "ci95": [
+      0.0006899043565310389,
+      0.0011740006219101904
+    ],
+    "exact_rate": 0.001,
+    "paired_delta_vs_minimum_weight": 0.0009,
+    "paired_delta_se": 0.0001224203813879167,
+    "seconds": 0.007869600001868093,
+    "decode_shots_per_second": 7624275.6919992305,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 1,
+    "rate": 1.6666666666666667e-05,
+    "ci95": [
+      2.94208197400375e-06,
+      9.44093321800882e-05
+    ],
+    "exact_rate": 2.50898e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.046256400004494935,
+    "decode_shots_per_second": 1297117.8041129345,
+    "physical_marginal": 0.0009999999999999998
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 1,
+    "rate": 1.6666666666666667e-05,
+    "ci95": [
+      2.94208197400375e-06,
+      9.44093321800882e-05
+    ],
+    "exact_rate": 2.50898e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.005594399997789878,
+    "decode_shots_per_second": 10725010.729247743,
+    "physical_marginal": 0.0009999999999999998
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 1,
+    "rate": 1.6666666666666667e-05,
+    "ci95": [
+      2.94208197400375e-06,
+      9.44093321800882e-05
+    ],
+    "exact_rate": 2.50898e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0051644000013766345,
+    "decode_shots_per_second": 11618000.151809748,
+    "physical_marginal": 0.0009999999999999998
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 99,
+    "rate": 0.00165,
+    "ci95": [
+      0.0013555964065891794,
+      0.0020082125415298076
+    ],
+    "exact_rate": 0.0017,
+    "paired_delta_vs_minimum_weight": 0.0016333333333333334,
+    "paired_delta_se": 0.00016485815790995325,
+    "seconds": 0.01567609999983688,
+    "decode_shots_per_second": 3827482.6009418378,
+    "physical_marginal": 0.0009999999999999998
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 6059,
+    "rate": 0.10098333333333333,
+    "ci95": [
+      0.09859790925154109,
+      0.1034198476805654
+    ],
+    "exact_rate": 0.1000026982,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006683099996735109,
+    "decode_shots_per_second": 8977869.55594137,
+    "physical_marginal": 0.06756666666666668
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 119,
+    "rate": 0.0019833333333333335,
+    "ci95": [
+      0.0016578117531946689,
+      0.002372621181447767
+    ],
+    "exact_rate": 0.0017973018000000003,
+    "paired_delta_vs_minimum_weight": -0.099,
+    "paired_delta_se": 0.0012461087395947003,
+    "seconds": 0.023988100001588464,
+    "decode_shots_per_second": 2501240.198099344,
+    "physical_marginal": 0.06756666666666668
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 119,
+    "rate": 0.0019833333333333335,
+    "ci95": [
+      0.0016578117531946689,
+      0.002372621181447767
+    ],
+    "exact_rate": 0.0017973018000000003,
+    "paired_delta_vs_minimum_weight": -0.099,
+    "paired_delta_se": 0.0012461087395947003,
+    "seconds": 0.005948599999101134,
+    "decode_shots_per_second": 10086406.887177879,
+    "physical_marginal": 0.06756666666666668
+  },
+  {
+    "distance": 3,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 3056,
+    "rate": 0.05093333333333333,
+    "ci95": [
+      0.04920267711317035,
+      0.052721488242440426
+    ],
+    "exact_rate": 0.0509,
+    "paired_delta_vs_minimum_weight": -0.05005,
+    "paired_delta_se": 0.000909326591875524,
+    "seconds": 0.038198299993382534,
+    "decode_shots_per_second": 1570750.5310549,
+    "physical_marginal": 0.06756666666666668
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 10,
+    "rate": 0.00016666666666666666,
+    "ci95": [
+      9.05355280828352e-05,
+      0.00030679668000680837
+    ],
+    "exact_rate": 0.00029800000000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.010075499998492887,
+    "decode_shots_per_second": 5955039.453027137,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 10,
+    "rate": 0.00016666666666666666,
+    "ci95": [
+      9.05355280828352e-05,
+      0.00030679668000680837
+    ],
+    "exact_rate": 0.00029800000000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.054282199998851866,
+    "decode_shots_per_second": 1105334.713796955,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 10,
+    "rate": 0.00016666666666666666,
+    "ci95": [
+      9.05355280828352e-05,
+      0.00030679668000680837
+    ],
+    "exact_rate": 0.00029800000000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.004879699998127762,
+    "decode_shots_per_second": 12295837.86360242,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 604,
+    "rate": 0.010066666666666666,
+    "ci95": [
+      0.00929867862781606,
+      0.010897385980019988
+    ],
+    "exact_rate": 0.01,
+    "paired_delta_vs_minimum_weight": 0.0099,
+    "paired_delta_se": 0.00040692933303001995,
+    "seconds": 0.010492900000826921,
+    "decode_shots_per_second": 5718152.273944433,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 12,
+    "rate": 0.0002,
+    "ci95": [
+      0.00011441622674721844,
+      0.00034957837999476994
+    ],
+    "exact_rate": 0.00024998,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.016502200000104494,
+    "decode_shots_per_second": 3635878.852493611,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 12,
+    "rate": 0.0002,
+    "ci95": [
+      0.00011441622674721844,
+      0.00034957837999476994
+    ],
+    "exact_rate": 0.00024998,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.005320900003425777,
+    "decode_shots_per_second": 11276287.838781025,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 12,
+    "rate": 0.0002,
+    "ci95": [
+      0.00011441622674721844,
+      0.00034957837999476994
+    ],
+    "exact_rate": 0.00024998,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.011253499997110339,
+    "decode_shots_per_second": 5331674.5914965775,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 1041,
+    "rate": 0.01735,
+    "ci95": [
+      0.016335703694434878,
+      0.018426095018938514
+    ],
+    "exact_rate": 0.017,
+    "paired_delta_vs_minimum_weight": 0.01715,
+    "paired_delta_se": 0.0005305577619334846,
+    "seconds": 0.009350299998914124,
+    "decode_shots_per_second": 6416906.410165232,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 6044,
+    "rate": 0.10073333333333333,
+    "ci95": [
+      0.09835057621895245,
+      0.10316721272326147
+    ],
+    "exact_rate": 0.1002682,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.012499599997681798,
+    "decode_shots_per_second": 4800153.605805604,
+    "physical_marginal": 0.07566666666666666
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 1075,
+    "rate": 0.017916666666666668,
+    "ci95": [
+      0.01688572446879242,
+      0.019009335021670834
+    ],
+    "exact_rate": 0.017731800000000006,
+    "paired_delta_vs_minimum_weight": -0.08281666666666666,
+    "paired_delta_se": 0.0013647950337832976,
+    "seconds": 0.008740399996895576,
+    "decode_shots_per_second": 6864674.388049845,
+    "physical_marginal": 0.07566666666666666
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 1075,
+    "rate": 0.017916666666666668,
+    "ci95": [
+      0.01688572446879242,
+      0.019009335021670834
+    ],
+    "exact_rate": 0.017731800000000006,
+    "paired_delta_vs_minimum_weight": -0.08281666666666666,
+    "paired_delta_se": 0.0013647950337832976,
+    "seconds": 0.006190100000821985,
+    "decode_shots_per_second": 9692896.720898302,
+    "physical_marginal": 0.07566666666666666
+  },
+  {
+    "distance": 3,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 3485,
+    "rate": 0.058083333333333334,
+    "ci95": [
+      0.05623990791854573,
+      0.05998334194799301
+    ],
+    "exact_rate": 0.059000000000000004,
+    "paired_delta_vs_minimum_weight": -0.04265,
+    "paired_delta_se": 0.0009828977305335657,
+    "seconds": 0.004327999999077292,
+    "decode_shots_per_second": 13863216.269129321,
+    "physical_marginal": 0.07566666666666666
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 440,
+    "rate": 0.007333333333333333,
+    "ci95": [
+      0.006681475450542604,
+      0.008048272467801171
+    ],
+    "exact_rate": 0.007250000000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0062392000036197715,
+    "decode_shots_per_second": 9616617.5094868,
+    "physical_marginal": 0.04999999999999999
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 440,
+    "rate": 0.007333333333333333,
+    "ci95": [
+      0.006681475450542604,
+      0.008048272467801171
+    ],
+    "exact_rate": 0.007250000000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006421000001864741,
+    "decode_shots_per_second": 9344338.885309957,
+    "physical_marginal": 0.04999999999999999
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 440,
+    "rate": 0.007333333333333333,
+    "ci95": [
+      0.006681475450542604,
+      0.008048272467801171
+    ],
+    "exact_rate": 0.007250000000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.00460190000012517,
+    "decode_shots_per_second": 13038092.961248185,
+    "physical_marginal": 0.04999999999999999
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 2988,
+    "rate": 0.0498,
+    "ci95": [
+      0.04808805634877884,
+      0.05156958745265221
+    ],
+    "exact_rate": 0.05,
+    "paired_delta_vs_minimum_weight": 0.042466666666666666,
+    "paired_delta_se": 0.0008707979148576967,
+    "seconds": 0.0045535999997809995,
+    "decode_shots_per_second": 13176387.913493859,
+    "physical_marginal": 0.04999999999999999
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 387,
+    "rate": 0.00645,
+    "ci95": [
+      0.005840297429446223,
+      0.007122896924610416
+    ],
+    "exact_rate": 0.006147500000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006370800001604948,
+    "decode_shots_per_second": 9417969.483406268,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 387,
+    "rate": 0.00645,
+    "ci95": [
+      0.005840297429446223,
+      0.007122896924610416
+    ],
+    "exact_rate": 0.006147500000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006534200001624413,
+    "decode_shots_per_second": 9182455.38628813,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 387,
+    "rate": 0.00645,
+    "ci95": [
+      0.005840297429446223,
+      0.007122896924610416
+    ],
+    "exact_rate": 0.006147500000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.004199999999400461,
+    "decode_shots_per_second": 14285714.287753534,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 5095,
+    "rate": 0.08491666666666667,
+    "ci95": [
+      0.08271266874625598,
+      0.08717381203542034
+    ],
+    "exact_rate": 0.085,
+    "paired_delta_vs_minimum_weight": 0.07846666666666667,
+    "paired_delta_se": 0.0011083837888528826,
+    "seconds": 0.033903199997439515,
+    "decode_shots_per_second": 1769744.4490352357,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 6470,
+    "rate": 0.10783333333333334,
+    "ci95": [
+      0.10537656268034987,
+      0.11034031717481352
+    ],
+    "exact_rate": 0.10652500000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.00507780000771163,
+    "decode_shots_per_second": 11816140.830453796,
+    "physical_marginal": 0.11166666666666666
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 4927,
+    "rate": 0.08211666666666667,
+    "ci95": [
+      0.07994657084815163,
+      0.08434026844672773
+    ],
+    "exact_rate": 0.08347500000000001,
+    "paired_delta_vs_minimum_weight": -0.025716666666666665,
+    "paired_delta_se": 0.0017555866468380468,
+    "seconds": 0.006059099996491568,
+    "decode_shots_per_second": 9902460.767233105,
+    "physical_marginal": 0.11166666666666666
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 4927,
+    "rate": 0.08211666666666667,
+    "ci95": [
+      0.07994657084815163,
+      0.08434026844672773
+    ],
+    "exact_rate": 0.08347500000000001,
+    "paired_delta_vs_minimum_weight": -0.025716666666666665,
+    "paired_delta_se": 0.0017555866468380468,
+    "seconds": 0.03008119999867631,
+    "decode_shots_per_second": 1994601.2792920573,
+    "physical_marginal": 0.11166666666666666
+  },
+  {
+    "distance": 3,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 5616,
+    "rate": 0.0936,
+    "ci95": [
+      0.091295333260651,
+      0.09595670236996116
+    ],
+    "exact_rate": 0.095,
+    "paired_delta_vs_minimum_weight": -0.014233333333333334,
+    "paired_delta_se": 0.0012418553844976714,
+    "seconds": 0.005629600000247592,
+    "decode_shots_per_second": 10657950.830851424,
+    "physical_marginal": 0.11166666666666666
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 1735,
+    "rate": 0.028916666666666667,
+    "ci95": [
+      0.027605695866758425,
+      0.03028795517897861
+    ],
+    "exact_rate": 0.028000000000000004,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.009768899999471614,
+    "decode_shots_per_second": 6141940.239253684,
+    "physical_marginal": 0.10000000000000002
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 1735,
+    "rate": 0.028916666666666667,
+    "ci95": [
+      0.027605695866758425,
+      0.03028795517897861
+    ],
+    "exact_rate": 0.028000000000000004,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.022929199996724492,
+    "decode_shots_per_second": 2616750.6938127447,
+    "physical_marginal": 0.10000000000000002
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 1735,
+    "rate": 0.028916666666666667,
+    "ci95": [
+      0.027605695866758425,
+      0.03028795517897861
+    ],
+    "exact_rate": 0.028000000000000004,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.004908299997623544,
+    "decode_shots_per_second": 12224191.681244066,
+    "physical_marginal": 0.10000000000000002
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 5953,
+    "rate": 0.09921666666666666,
+    "ci95": [
+      0.09685018797813474,
+      0.10163446182539748
+    ],
+    "exact_rate": 0.10000000000000003,
+    "paired_delta_vs_minimum_weight": 0.0703,
+    "paired_delta_se": 0.0011822246519107354,
+    "seconds": 0.0041368000020156614,
+    "decode_shots_per_second": 14503964.409873554,
+    "physical_marginal": 0.10000000000000002
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 1467,
+    "rate": 0.02445,
+    "ci95": [
+      0.023244342190109266,
+      0.02571654743621356
+    ],
+    "exact_rate": 0.02408,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.005438699998194352,
+    "decode_shots_per_second": 11032048.103392355,
+    "physical_marginal": 0.09999999999999999
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 1467,
+    "rate": 0.02445,
+    "ci95": [
+      0.023244342190109266,
+      0.02571654743621356
+    ],
+    "exact_rate": 0.02408,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006202000004122965,
+    "decode_shots_per_second": 9674298.606919253,
+    "physical_marginal": 0.09999999999999999
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 1467,
+    "rate": 0.02445,
+    "ci95": [
+      0.023244342190109266,
+      0.02571654743621356
+    ],
+    "exact_rate": 0.02408,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.07641639999928884,
+    "decode_shots_per_second": 785171.7694180618,
+    "physical_marginal": 0.09999999999999999
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 10194,
+    "rate": 0.1699,
+    "ci95": [
+      0.16691622493045685,
+      0.17292604121537256
+    ],
+    "exact_rate": 0.17000000000000004,
+    "paired_delta_vs_minimum_weight": 0.14545,
+    "paired_delta_se": 0.001468160903589772,
+    "seconds": 0.004414500002894783,
+    "decode_shots_per_second": 13591573.21568815,
+    "physical_marginal": 0.09999999999999999
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 7584,
+    "rate": 0.1264,
+    "ci95": [
+      0.12376499358116676,
+      0.12908284232335274
+    ],
+    "exact_rate": 0.12520000000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.009649799998442177,
+    "decode_shots_per_second": 6217745.446505228,
+    "physical_marginal": 0.1566666666666667
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 7584,
+    "rate": 0.1264,
+    "ci95": [
+      0.12376499358116676,
+      0.12908284232335274
+    ],
+    "exact_rate": 0.12520000000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.043501399999513524,
+    "decode_shots_per_second": 1379265.9546743548,
+    "physical_marginal": 0.1566666666666667
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 7584,
+    "rate": 0.1264,
+    "ci95": [
+      0.12376499358116676,
+      0.12908284232335274
+    ],
+    "exact_rate": 0.12520000000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.007703600003878819,
+    "decode_shots_per_second": 7788566.380625884,
+    "physical_marginal": 0.1566666666666667
+  },
+  {
+    "distance": 3,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 8305,
+    "rate": 0.13841666666666666,
+    "ci95": [
+      0.1356765878151067,
+      0.141203042803583
+    ],
+    "exact_rate": 0.14000000000000004,
+    "paired_delta_vs_minimum_weight": 0.012016666666666667,
+    "paired_delta_se": 0.0014789699140931518,
+    "seconds": 0.010644200003298465,
+    "decode_shots_per_second": 5636872.661299766,
+    "physical_marginal": 0.1566666666666667
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 6267,
+    "rate": 0.10445,
+    "ci95": [
+      0.10202805843644254,
+      0.10692258795550784
+    ],
+    "exact_rate": 0.10400000000000004,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.02638229999865871,
+    "decode_shots_per_second": 2274252.0554709192,
+    "physical_marginal": 0.20000000000000007
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 6267,
+    "rate": 0.10445,
+    "ci95": [
+      0.10202805843644254,
+      0.10692258795550784
+    ],
+    "exact_rate": 0.10400000000000004,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0054006999962439295,
+    "decode_shots_per_second": 11109670.976304684,
+    "physical_marginal": 0.20000000000000007
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 6267,
+    "rate": 0.10445,
+    "ci95": [
+      0.10202805843644254,
+      0.10692258795550784
+    ],
+    "exact_rate": 0.10400000000000004,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.010353200006647967,
+    "decode_shots_per_second": 5795309.65899171,
+    "physical_marginal": 0.20000000000000007
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 12172,
+    "rate": 0.20286666666666667,
+    "ci95": [
+      0.19966805266781215,
+      0.20610332574518628
+    ],
+    "exact_rate": 0.20000000000000004,
+    "paired_delta_vs_minimum_weight": 0.09841666666666667,
+    "paired_delta_se": 0.001597393943912853,
+    "seconds": 0.007849900001019705,
+    "decode_shots_per_second": 7643409.469191452,
+    "physical_marginal": 0.20000000000000007
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 5480,
+    "rate": 0.09133333333333334,
+    "ci95": [
+      0.08905432344453308,
+      0.09366466907771963
+    ],
+    "exact_rate": 0.09224,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.005044299992732704,
+    "decode_shots_per_second": 11894613.739555871,
+    "physical_marginal": 0.20000000000000004
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 3699,
+    "rate": 0.06165,
+    "ci95": [
+      0.05975340466291988,
+      0.06360272185941976
+    ],
+    "exact_rate": 0.06,
+    "paired_delta_vs_minimum_weight": -0.029683333333333332,
+    "paired_delta_se": 0.001251024900623868,
+    "seconds": 0.007249599999340717,
+    "decode_shots_per_second": 8276318.694197809,
+    "physical_marginal": 0.20000000000000004
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 3699,
+    "rate": 0.06165,
+    "ci95": [
+      0.05975340466291988,
+      0.06360272185941976
+    ],
+    "exact_rate": 0.06,
+    "paired_delta_vs_minimum_weight": -0.029683333333333332,
+    "paired_delta_se": 0.001251024900623868,
+    "seconds": 0.0052797000025748275,
+    "decode_shots_per_second": 11364282.055938583,
+    "physical_marginal": 0.20000000000000004
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 20333,
+    "rate": 0.3388833333333333,
+    "ci95": [
+      0.33510639493436567,
+      0.34268090117952565
+    ],
+    "exact_rate": 0.33999999999999997,
+    "paired_delta_vs_minimum_weight": 0.24755,
+    "paired_delta_se": 0.0018383524192403793,
+    "seconds": 0.0039903000033518765,
+    "decode_shots_per_second": 15036463.411172,
+    "physical_marginal": 0.20000000000000004
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 11634,
+    "rate": 0.1939,
+    "ci95": [
+      0.19075622461781044,
+      0.19708296855770718
+    ],
+    "exact_rate": 0.19360000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.005269999997835839,
+    "decode_shots_per_second": 11385199.245662125,
+    "physical_marginal": 0.24666666666666667
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 11634,
+    "rate": 0.1939,
+    "ci95": [
+      0.19075622461781044,
+      0.19708296855770718
+    ],
+    "exact_rate": 0.19360000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006417399999918416,
+    "decode_shots_per_second": 9349580.82724511,
+    "physical_marginal": 0.24666666666666667
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 11634,
+    "rate": 0.1939,
+    "ci95": [
+      0.19075622461781044,
+      0.19708296855770718
+    ],
+    "exact_rate": 0.19360000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0056790000016917475,
+    "decode_shots_per_second": 10565240.356070837,
+    "physical_marginal": 0.24666666666666667
+  },
+  {
+    "distance": 3,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 13868,
+    "rate": 0.23113333333333333,
+    "ci95": [
+      0.22777750984764114,
+      0.23452358262254566
+    ],
+    "exact_rate": 0.23000000000000007,
+    "paired_delta_vs_minimum_weight": 0.037233333333333334,
+    "paired_delta_se": 0.0018088530013891375,
+    "seconds": 0.006342600001516985,
+    "decode_shots_per_second": 9459842.964344205,
+    "physical_marginal": 0.24666666666666667
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 9.985006e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0065519999989192,
+    "decode_shots_per_second": 9157509.159019755,
+    "physical_marginal": 0.0010000000000000002
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 9.985006e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.00867370000196388,
+    "decode_shots_per_second": 6917463.134119803,
+    "physical_marginal": 0.0010000000000000002
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 9.985006e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.012210000004415633,
+    "decode_shots_per_second": 4914004.912227809,
+    "physical_marginal": 0.0010000000000000002
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.0019950019999995e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01577030000044033,
+    "decode_shots_per_second": 3804620.0768739157,
+    "physical_marginal": 0.0010000000000000002
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 8.152835110149998e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.005934799999522511,
+    "decode_shots_per_second": 10109860.484738719,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 8.152835110149998e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.007482400000299094,
+    "decode_shots_per_second": 8018817.491393352,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 8.152835110149998e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.020743600001878804,
+    "decode_shots_per_second": 2892458.396544748,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.99431577837005e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.007001099998888094,
+    "decode_shots_per_second": 8570081.845642703,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 8.986505400000001e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01659519999884651,
+    "decode_shots_per_second": 3615503.2783076097,
+    "physical_marginal": 0.04090000000000001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 8.986505400000001e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.023825300002499716,
+    "decode_shots_per_second": 2518331.353380855,
+    "physical_marginal": 0.04090000000000001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 8.986505400000001e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01857210000162013,
+    "decode_shots_per_second": 3230652.429976466,
+    "physical_marginal": 0.04090000000000001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 1487,
+    "rate": 0.024783333333333334,
+    "ci95": [
+      0.023569474754582313,
+      0.026058038858263965
+    ],
+    "exact_rate": 0.0250018017955018,
+    "paired_delta_vs_minimum_weight": 0.024783333333333334,
+    "paired_delta_se": 0.0006346852572679629,
+    "seconds": 0.006901600001583574,
+    "decode_shots_per_second": 8693636.256264197,
+    "physical_marginal": 0.04090000000000001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 9.850600000000002e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.02313039999717148,
+    "decode_shots_per_second": 2593988.8634583554,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 9.850600000000002e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.00643800000398187,
+    "decode_shots_per_second": 9319664.486314122,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 9.850600000000002e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0614447999978438,
+    "decode_shots_per_second": 976486.2120489528,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 18,
+    "rate": 0.0003,
+    "ci95": [
+      0.00018978077372775755,
+      0.00047420102897126516
+    ],
+    "exact_rate": 0.00020195020000000002,
+    "paired_delta_vs_minimum_weight": 0.0003,
+    "paired_delta_se": 7.070065989594318e-05,
+    "seconds": 0.006693999996059574,
+    "decode_shots_per_second": 8963250.677520022,
+    "physical_marginal": 0.01
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 1,
+    "rate": 1.6666666666666667e-05,
+    "ci95": [
+      2.94208197400375e-06,
+      9.44093321800882e-05
+    ],
+    "exact_rate": 8.066092764999997e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01258899999447749,
+    "decode_shots_per_second": 4766065.614927369,
+    "physical_marginal": 0.010000000000000002
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 1,
+    "rate": 1.6666666666666667e-05,
+    "ci95": [
+      2.94208197400375e-06,
+      9.44093321800882e-05
+    ],
+    "exact_rate": 8.066092764999997e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01165969999783556,
+    "decode_shots_per_second": 5145929.999154186,
+    "physical_marginal": 0.010000000000000002
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 1,
+    "rate": 1.6666666666666667e-05,
+    "ci95": [
+      2.94208197400375e-06,
+      9.44093321800882e-05
+    ],
+    "exact_rate": 8.066092764999997e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01670199999352917,
+    "decode_shots_per_second": 3592384.1470030956,
+    "physical_marginal": 0.010000000000000002
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 15,
+    "rate": 0.00025,
+    "ci95": [
+      0.00015151546414927404,
+      0.00041247274057123145
+    ],
+    "exact_rate": 0.00039878686425500007,
+    "paired_delta_vs_minimum_weight": 0.00023333333333333333,
+    "paired_delta_se": 6.235420019736321e-05,
+    "seconds": 0.0066409000028215814,
+    "decode_shots_per_second": 9034919.961828552,
+    "physical_marginal": 0.010000000000000002
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 8.865540000000001e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.012930400003824616,
+    "decode_shots_per_second": 4640227.679132348,
+    "physical_marginal": 0.04900000000000001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 8.865540000000001e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.11373250000178814,
+    "decode_shots_per_second": 527553.6895703222,
+    "physical_marginal": 0.04900000000000001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 8.865540000000001e-06,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.018677500003832392,
+    "decode_shots_per_second": 3212421.361942912,
+    "physical_marginal": 0.04900000000000001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 1459,
+    "rate": 0.024316666666666667,
+    "ci95": [
+      0.02311430597490624,
+      0.02557993405680721
+    ],
+    "exact_rate": 0.025181755180000008,
+    "paired_delta_vs_minimum_weight": 0.024316666666666667,
+    "paired_delta_se": 0.0006288317450936634,
+    "seconds": 0.014509900000120979,
+    "decode_shots_per_second": 4135107.7539817463,
+    "physical_marginal": 0.04900000000000001
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 59,
+    "rate": 0.0009833333333333332,
+    "ci95": [
+      0.0007624724023843913,
+      0.0012680885726877
+    ],
+    "exact_rate": 0.0011581250000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.04652619999978924,
+    "decode_shots_per_second": 1289595.9695885715,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 59,
+    "rate": 0.0009833333333333332,
+    "ci95": [
+      0.0007624724023843913,
+      0.0012680885726877
+    ],
+    "exact_rate": 0.0011581250000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.018006899997999426,
+    "decode_shots_per_second": 3332056.0455528726,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 59,
+    "rate": 0.0009833333333333332,
+    "ci95": [
+      0.0007624724023843913,
+      0.0012680885726877
+    ],
+    "exact_rate": 0.0011581250000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.014859799997793743,
+    "decode_shots_per_second": 4037739.4048983357,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 359,
+    "rate": 0.0059833333333333336,
+    "ci95": [
+      0.005397090971130142,
+      0.006632829801793671
+    ],
+    "exact_rate": 0.005219375,
+    "paired_delta_vs_minimum_weight": 0.005,
+    "paired_delta_se": 0.0002946302807569648,
+    "seconds": 0.008250999999290798,
+    "decode_shots_per_second": 7271845.837493299,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 68,
+    "rate": 0.0011333333333333334,
+    "ci95": [
+      0.000894173078837413,
+      0.00143636869017023
+    ],
+    "exact_rate": 0.0009607292656249998,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.00945030000366387,
+    "decode_shots_per_second": 6349004.791037118,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 68,
+    "rate": 0.0011333333333333334,
+    "ci95": [
+      0.000894173078837413,
+      0.00143636869017023
+    ],
+    "exact_rate": 0.0009607292656249998,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.02657559999715886,
+    "decode_shots_per_second": 2257710.0801643035,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 68,
+    "rate": 0.0011333333333333334,
+    "ci95": [
+      0.000894173078837413,
+      0.00143636869017023
+    ],
+    "exact_rate": 0.0009607292656249998,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.05205339999884018,
+    "decode_shots_per_second": 1152662.4581936412,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 577,
+    "rate": 0.009616666666666667,
+    "ci95": [
+      0.008866571465009486,
+      0.010429550761019913
+    ],
+    "exact_rate": 0.009882513921874999,
+    "paired_delta_vs_minimum_weight": 0.008483333333333334,
+    "paired_delta_se": 0.00037590278793108047,
+    "seconds": 0.0177345999982208,
+    "decode_shots_per_second": 3383216.9885996534,
+    "physical_marginal": 0.05
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 63,
+    "rate": 0.00105,
+    "ci95": [
+      0.0008208471350538457,
+      0.0013430386373229353
+    ],
+    "exact_rate": 0.0010423125000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.005682199996954296,
+    "decode_shots_per_second": 10559290.42134393,
+    "physical_marginal": 0.08499999999999999
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 63,
+    "rate": 0.00105,
+    "ci95": [
+      0.0008208471350538457,
+      0.0013430386373229353
+    ],
+    "exact_rate": 0.0010423125000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.017778700006601866,
+    "decode_shots_per_second": 3374824.9297035136,
+    "physical_marginal": 0.08499999999999999
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 63,
+    "rate": 0.00105,
+    "ci95": [
+      0.0008208471350538457,
+      0.0013430386373229353
+    ],
+    "exact_rate": 0.0010423125000000003,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01333350000277278,
+    "decode_shots_per_second": 4499943.749767327,
+    "physical_marginal": 0.08499999999999999
+  },
+  {
+    "distance": 5,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 1750,
+    "rate": 0.029166666666666667,
+    "ci95": [
+      0.027850071526888804,
+      0.030543547508740814
+    ],
+    "exact_rate": 0.0296974375,
+    "paired_delta_vs_minimum_weight": 0.02811666666666667,
+    "paired_delta_se": 0.0006773302800767453,
+    "seconds": 0.03613720000430476,
+    "decode_shots_per_second": 1660338.9303225663,
+    "physical_marginal": 0.08499999999999999
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 522,
+    "rate": 0.0087,
+    "ci95": [
+      0.007987733104635259,
+      0.009475173158454652
+    ],
+    "exact_rate": 0.008560000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.017966300001717173,
+    "decode_shots_per_second": 3339585.7797245597,
+    "physical_marginal": 0.10000000000000003
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 522,
+    "rate": 0.0087,
+    "ci95": [
+      0.007987733104635259,
+      0.009475173158454652
+    ],
+    "exact_rate": 0.008560000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006835600001068087,
+    "decode_shots_per_second": 8777576.217248637,
+    "physical_marginal": 0.10000000000000003
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 522,
+    "rate": 0.0087,
+    "ci95": [
+      0.007987733104635259,
+      0.009475173158454652
+    ],
+    "exact_rate": 0.008560000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.018761699997412506,
+    "decode_shots_per_second": 3198004.4456672273,
+    "physical_marginal": 0.10000000000000003
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 1271,
+    "rate": 0.021183333333333332,
+    "ci95": [
+      0.02006143654582962,
+      0.022366538012563414
+    ],
+    "exact_rate": 0.021520000000000004,
+    "paired_delta_vs_minimum_weight": 0.012483333333333334,
+    "paired_delta_se": 0.000513610804635197,
+    "seconds": 0.06551420000687358,
+    "decode_shots_per_second": 915831.9874730204,
+    "physical_marginal": 0.10000000000000003
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 407,
+    "rate": 0.006783333333333333,
+    "ci95": [
+      0.006157397429360224,
+      0.007472420911219863
+    ],
+    "exact_rate": 0.007222593999999999,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.008326500003022375,
+    "decode_shots_per_second": 7205908.842637488,
+    "physical_marginal": 0.1
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 367,
+    "rate": 0.006116666666666667,
+    "ci95": [
+      0.005523629424781256,
+      0.006772940942751935
+    ],
+    "exact_rate": 0.006401145999999998,
+    "paired_delta_vs_minimum_weight": -0.0006666666666666666,
+    "paired_delta_se": 0.00024150962308134484,
+    "seconds": 0.010071600001538172,
+    "decode_shots_per_second": 5957345.405976864,
+    "physical_marginal": 0.1
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 367,
+    "rate": 0.006116666666666667,
+    "ci95": [
+      0.005523629424781256,
+      0.006772940942751935
+    ],
+    "exact_rate": 0.006401145999999998,
+    "paired_delta_vs_minimum_weight": -0.0006666666666666666,
+    "paired_delta_se": 0.00024150962308134484,
+    "seconds": 0.03342740000152844,
+    "decode_shots_per_second": 1794934.694210634,
+    "physical_marginal": 0.1
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 2215,
+    "rate": 0.03691666666666667,
+    "ci95": [
+      0.035437326108100686,
+      0.038455300614199106
+    ],
+    "exact_rate": 0.03895569800000001,
+    "paired_delta_vs_minimum_weight": 0.030133333333333335,
+    "paired_delta_se": 0.0007054448542271188,
+    "seconds": 0.007525299999542767,
+    "decode_shots_per_second": 7973104.06278096,
+    "physical_marginal": 0.1
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 429,
+    "rate": 0.00715,
+    "ci95": [
+      0.006506669251376203,
+      0.007856435474379676
+    ],
+    "exact_rate": 0.007704000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.022683800001686905,
+    "decode_shots_per_second": 2645059.4695570422,
+    "physical_marginal": 0.13000000000000003
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 429,
+    "rate": 0.00715,
+    "ci95": [
+      0.006506669251376203,
+      0.007856435474379676
+    ],
+    "exact_rate": 0.007704000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.009644800000387477,
+    "decode_shots_per_second": 6220968.811959763,
+    "physical_marginal": 0.13000000000000003
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 429,
+    "rate": 0.00715,
+    "ci95": [
+      0.006506669251376203,
+      0.007856435474379676
+    ],
+    "exact_rate": 0.007704000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.057178599996404955,
+    "decode_shots_per_second": 1049343.635621936,
+    "physical_marginal": 0.13000000000000003
+  },
+  {
+    "distance": 5,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 2604,
+    "rate": 0.0434,
+    "ci95": [
+      0.04179866550267082,
+      0.04505979775751004
+    ],
+    "exact_rate": 0.044368000000000005,
+    "paired_delta_vs_minimum_weight": 0.03625,
+    "paired_delta_se": 0.0007965540924481685,
+    "seconds": 0.01401379999879282,
+    "decode_shots_per_second": 4281493.956326516,
+    "physical_marginal": 0.13000000000000003
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 3544,
+    "rate": 0.05906666666666667,
+    "ci95": [
+      0.05720839080302718,
+      0.06098139982375574
+    ],
+    "exact_rate": 0.05792000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.009039399999892339,
+    "decode_shots_per_second": 6637608.690921368,
+    "physical_marginal": 0.20000000000000007
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 3544,
+    "rate": 0.05906666666666667,
+    "ci95": [
+      0.05720839080302718,
+      0.06098139982375574
+    ],
+    "exact_rate": 0.05792000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.007896600000094622,
+    "decode_shots_per_second": 7598206.82309868,
+    "physical_marginal": 0.20000000000000007
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 3544,
+    "rate": 0.05906666666666667,
+    "ci95": [
+      0.05720839080302718,
+      0.06098139982375574
+    ],
+    "exact_rate": 0.05792000000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.06854290000410401,
+    "decode_shots_per_second": 875364.1879232932,
+    "physical_marginal": 0.20000000000000007
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 5308,
+    "rate": 0.08846666666666667,
+    "ci95": [
+      0.08622072254320007,
+      0.09076530369495098
+    ],
+    "exact_rate": 0.08864000000000004,
+    "paired_delta_vs_minimum_weight": 0.0294,
+    "paired_delta_se": 0.0009156340703980087,
+    "seconds": 0.008522899999661604,
+    "decode_shots_per_second": 7039857.325837715,
+    "physical_marginal": 0.20000000000000007
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 3014,
+    "rate": 0.05023333333333333,
+    "ci95": [
+      0.048514205849700086,
+      0.05201004913421144
+    ],
+    "exact_rate": 0.050691127999999995,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006654699995124247,
+    "decode_shots_per_second": 9016184.056976376,
+    "physical_marginal": 0.19999999999999998
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 2100,
+    "rate": 0.035,
+    "ci95": [
+      0.033558997842860004,
+      0.03650054095692996
+    ],
+    "exact_rate": 0.034738375999999994,
+    "paired_delta_vs_minimum_weight": -0.015233333333333333,
+    "paired_delta_se": 0.0007318372748093097,
+    "seconds": 0.011367299997800728,
+    "decode_shots_per_second": 5278298.277656823,
+    "physical_marginal": 0.19999999999999998
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 2100,
+    "rate": 0.035,
+    "ci95": [
+      0.033558997842860004,
+      0.03650054095692996
+    ],
+    "exact_rate": 0.034738375999999994,
+    "paired_delta_vs_minimum_weight": -0.015233333333333333,
+    "paired_delta_se": 0.0007318372748093097,
+    "seconds": 0.01061449999906472,
+    "decode_shots_per_second": 5652644.967288785,
+    "physical_marginal": 0.19999999999999998
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 8868,
+    "rate": 0.1478,
+    "ci95": [
+      0.14498279708366177,
+      0.15066229875566298
+    ],
+    "exact_rate": 0.14948237599999997,
+    "paired_delta_vs_minimum_weight": 0.09756666666666666,
+    "paired_delta_se": 0.0012365876527177862,
+    "seconds": 0.01117320000048494,
+    "decode_shots_per_second": 5369992.481777457,
+    "physical_marginal": 0.19999999999999998
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 3190,
+    "rate": 0.05316666666666667,
+    "ci95": [
+      0.05139983599386492,
+      0.05499071007145296
+    ],
+    "exact_rate": 0.05212800000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006092999999964377,
+    "decode_shots_per_second": 9847365.829698144,
+    "physical_marginal": 0.22000000000000008
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 3190,
+    "rate": 0.05316666666666667,
+    "ci95": [
+      0.05139983599386492,
+      0.05499071007145296
+    ],
+    "exact_rate": 0.05212800000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.010676799996872433,
+    "decode_shots_per_second": 5619661.323390516,
+    "physical_marginal": 0.22000000000000008
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 3190,
+    "rate": 0.05316666666666667,
+    "ci95": [
+      0.05139983599386492,
+      0.05499071007145296
+    ],
+    "exact_rate": 0.05212800000000002,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.024524800002836855,
+    "decode_shots_per_second": 2446503.131241014,
+    "physical_marginal": 0.22000000000000008
+  },
+  {
+    "distance": 5,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 6389,
+    "rate": 0.10648333333333333,
+    "ci95": [
+      0.10404036620280004,
+      0.10897668650694338
+    ],
+    "exact_rate": 0.10477600000000002,
+    "paired_delta_vs_minimum_weight": 0.053316666666666665,
+    "paired_delta_se": 0.0010732232205187373,
+    "seconds": 0.006334299996524351,
+    "decode_shots_per_second": 9472238.453013305,
+    "physical_marginal": 0.22000000000000008
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.491606998e-11,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01354429999992135,
+    "decode_shots_per_second": 4429907.7841120185,
+    "physical_marginal": 0.0009999999999999996
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.491606998e-11,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.019949100002122577,
+    "decode_shots_per_second": 3007654.480333249,
+    "physical_marginal": 0.0009999999999999996
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.491606998e-11,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.009997699999075849,
+    "decode_shots_per_second": 6001380.318027765,
+    "physical_marginal": 0.0009999999999999996
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 1.0980014993002005e-08,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.015552299995761132,
+    "decode_shots_per_second": 3857950.272072513,
+    "physical_marginal": 0.0009999999999999996
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.7467805578147578e-11,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006317799998214468,
+    "decode_shots_per_second": 9496976.798404057,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.7467805578147578e-11,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.009721999998873798,
+    "decode_shots_per_second": 6171569.63659231,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.7467805578147578e-11,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.011358899999322603,
+    "decode_shots_per_second": 5282201.621950907,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 1.8844795986928603e-08,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.1132279000012204,
+    "decode_shots_per_second": 529904.7319552274,
+    "physical_marginal": 0.001
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.1424462982e-11,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.021706100003939355,
+    "decode_shots_per_second": 2764199.924864938,
+    "physical_marginal": 0.029471428571428572
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.1424462982e-11,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.11737020000146003,
+    "decode_shots_per_second": 511203.01404661173,
+    "physical_marginal": 0.029471428571428572
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.1424462982e-11,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.010824299999512732,
+    "decode_shots_per_second": 5543083.617665897,
+    "physical_marginal": 0.029471428571428572
+  },
+  {
+    "distance": 7,
+    "background_p": 0.001,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 9.882013493701802e-09,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.008810199997242307,
+    "decode_shots_per_second": 6810288.077317278,
+    "physical_marginal": 0.029471428571428572
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.4166980000000003e-07,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.009403599997312995,
+    "decode_shots_per_second": 6380535.116034767,
+    "physical_marginal": 0.010000000000000002
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.4166980000000003e-07,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.009913799996866146,
+    "decode_shots_per_second": 6052169.70475162,
+    "physical_marginal": 0.010000000000000002
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.4166980000000003e-07,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01716619999933755,
+    "decode_shots_per_second": 3495240.6474534506,
+    "physical_marginal": 0.010000000000000002
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 1,
+    "rate": 1.6666666666666667e-05,
+    "ci95": [
+      2.94208197400375e-06,
+      9.44093321800882e-05
+    ],
+    "exact_rate": 1.0801493020000005e-05,
+    "paired_delta_vs_minimum_weight": 1.6666666666666667e-05,
+    "paired_delta_se": 1.6666666666666667e-05,
+    "seconds": 0.009464899998420151,
+    "decode_shots_per_second": 6339211.191878942,
+    "physical_marginal": 0.010000000000000002
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.69740941360237e-07,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006096199998864904,
+    "decode_shots_per_second": 9842196.780153511,
+    "physical_marginal": 0.009999999999999998
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.69740941360237e-07,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.015195199997833697,
+    "decode_shots_per_second": 3948615.3527794234,
+    "physical_marginal": 0.009999999999999998
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 2.69740941360237e-07,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.011640300002909498,
+    "decode_shots_per_second": 5154506.325868146,
+    "physical_marginal": 0.009999999999999998
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 1,
+    "rate": 1.6666666666666667e-05,
+    "ci95": [
+      2.94208197400375e-06,
+      9.44093321800882e-05
+    ],
+    "exact_rate": 1.8537323443394842e-05,
+    "paired_delta_vs_minimum_weight": 1.6666666666666667e-05,
+    "paired_delta_se": 1.6666666666666667e-05,
+    "seconds": 0.02052199999889126,
+    "decode_shots_per_second": 2923691.6481454833,
+    "physical_marginal": 0.009999999999999998
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.075028200000001e-07,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.010458300002937904,
+    "decode_shots_per_second": 5737070.076699371,
+    "physical_marginal": 0.03757142857142856
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.075028200000001e-07,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.011057000003347639,
+    "decode_shots_per_second": 5426426.696376438,
+    "physical_marginal": 0.03757142857142856
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 0,
+    "rate": 0.0,
+    "ci95": [
+      6.776263578034403e-21,
+      6.402021482791953e-05
+    ],
+    "exact_rate": 3.075028200000001e-07,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.009965500001271721,
+    "decode_shots_per_second": 6020771.661466385,
+    "physical_marginal": 0.03757142857142856
+  },
+  {
+    "distance": 7,
+    "background_p": 0.01,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 1,
+    "rate": 1.6666666666666667e-05,
+    "ci95": [
+      2.94208197400375e-06,
+      9.44093321800882e-05
+    ],
+    "exact_rate": 9.721343718e-06,
+    "paired_delta_vs_minimum_weight": 1.6666666666666667e-05,
+    "paired_delta_se": 1.6666666666666667e-05,
+    "seconds": 0.021969300003547687,
+    "decode_shots_per_second": 2731083.830177155,
+    "physical_marginal": 0.03757142857142856
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 11,
+    "rate": 0.00018333333333333334,
+    "ci95": [
+      0.00010237691938606928,
+      0.0003282864880297467
+    ],
+    "exact_rate": 0.000193578125,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006362899996020133,
+    "decode_shots_per_second": 9429662.581138916,
+    "physical_marginal": 0.04999999999999999
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 11,
+    "rate": 0.00018333333333333334,
+    "ci95": [
+      0.00010237691938606928,
+      0.0003282864880297467
+    ],
+    "exact_rate": 0.000193578125,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.018253500002174405,
+    "decode_shots_per_second": 3287040.8410908943,
+    "physical_marginal": 0.04999999999999999
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 11,
+    "rate": 0.00018333333333333334,
+    "ci95": [
+      0.00010237691938606928,
+      0.0003282864880297467
+    ],
+    "exact_rate": 0.000193578125,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.041787999998632586,
+    "decode_shots_per_second": 1435818.895423647,
+    "physical_marginal": 0.04999999999999999
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 69,
+    "rate": 0.00115,
+    "ci95": [
+      0.0009088824247959826,
+      0.0014549905435378328
+    ],
+    "exact_rate": 0.0012545796875,
+    "paired_delta_vs_minimum_weight": 0.0009666666666666667,
+    "paired_delta_se": 0.0001311752069958229,
+    "seconds": 0.010156499996810453,
+    "decode_shots_per_second": 5907546.893008654,
+    "physical_marginal": 0.04999999999999999
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 10,
+    "rate": 0.00016666666666666666,
+    "ci95": [
+      9.05355280828352e-05,
+      0.00030679668000680837
+    ],
+    "exact_rate": 0.0001553115491388889,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.00657629999841447,
+    "decode_shots_per_second": 9123671.367557116,
+    "physical_marginal": 0.049999999999999996
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 10,
+    "rate": 0.00016666666666666666,
+    "ci95": [
+      9.05355280828352e-05,
+      0.00030679668000680837
+    ],
+    "exact_rate": 0.00014918099638549384,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 2.3570422460557178e-05,
+    "seconds": 0.03346669999882579,
+    "decode_shots_per_second": 1792826.8996377042,
+    "physical_marginal": 0.049999999999999996
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 10,
+    "rate": 0.00016666666666666666,
+    "ci95": [
+      9.05355280828352e-05,
+      0.00030679668000680837
+    ],
+    "exact_rate": 0.00014918099638549384,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 2.3570422460557178e-05,
+    "seconds": 0.018190999999205815,
+    "decode_shots_per_second": 3298334.3413017145,
+    "physical_marginal": 0.049999999999999996
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 139,
+    "rate": 0.0023166666666666665,
+    "ci95": [
+      0.001962542607655738,
+      0.002734514313510145
+    ],
+    "exact_rate": 0.0021509229430799384,
+    "paired_delta_vs_minimum_weight": 0.00215,
+    "paired_delta_se": 0.0001905582651835462,
+    "seconds": 0.00854540000364068,
+    "decode_shots_per_second": 7021321.409698507,
+    "physical_marginal": 0.049999999999999996
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 12,
+    "rate": 0.0002,
+    "ci95": [
+      0.00011441622674721844,
+      0.00034957837999476994
+    ],
+    "exact_rate": 0.00017422031250000005,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.01136439999754657,
+    "decode_shots_per_second": 5279645.208981842,
+    "physical_marginal": 0.07357142857142855
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 12,
+    "rate": 0.0002,
+    "ci95": [
+      0.00011441622674721844,
+      0.00034957837999476994
+    ],
+    "exact_rate": 0.00017422031250000005,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.015312399995309534,
+    "decode_shots_per_second": 3918392.9376439415,
+    "physical_marginal": 0.07357142857142855
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 12,
+    "rate": 0.0002,
+    "ci95": [
+      0.00011441622674721844,
+      0.00034957837999476994
+    ],
+    "exact_rate": 0.00017422031250000005,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.018592000003991416,
+    "decode_shots_per_second": 3227194.4915619045,
+    "physical_marginal": 0.07357142857142855
+  },
+  {
+    "distance": 7,
+    "background_p": 0.05,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 69,
+    "rate": 0.00115,
+    "ci95": [
+      0.0009088824247959826,
+      0.0014549905435378328
+    ],
+    "exact_rate": 0.0011291217187500003,
+    "paired_delta_vs_minimum_weight": 0.00095,
+    "paired_delta_se": 0.00013636854250193055,
+    "seconds": 0.01818289999573608,
+    "decode_shots_per_second": 3299803.662455939,
+    "physical_marginal": 0.07357142857142855
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 154,
+    "rate": 0.0025666666666666667,
+    "ci95": [
+      0.0021924201572627354,
+      0.0030046047537957343
+    ],
+    "exact_rate": 0.002728000000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.006932500000402797,
+    "decode_shots_per_second": 8654886.404113067,
+    "physical_marginal": 0.10000000000000003
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 154,
+    "rate": 0.0025666666666666667,
+    "ci95": [
+      0.0021924201572627354,
+      0.0030046047537957343
+    ],
+    "exact_rate": 0.002728000000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.13686539999980596,
+    "decode_shots_per_second": 438386.9115209912,
+    "physical_marginal": 0.10000000000000003
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 154,
+    "rate": 0.0025666666666666667,
+    "ci95": [
+      0.0021924201572627354,
+      0.0030046047537957343
+    ],
+    "exact_rate": 0.002728000000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.022558099997695535,
+    "decode_shots_per_second": 2659798.4762071897,
+    "physical_marginal": 0.10000000000000003
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 546,
+    "rate": 0.0091,
+    "ci95": [
+      0.008370986776145381,
+      0.00989186827077267
+    ],
+    "exact_rate": 0.009143200000000002,
+    "paired_delta_vs_minimum_weight": 0.006533333333333334,
+    "paired_delta_se": 0.0003679700536769857,
+    "seconds": 0.015606799999659415,
+    "decode_shots_per_second": 3844478.048114243,
+    "physical_marginal": 0.10000000000000003
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 133,
+    "rate": 0.0022166666666666667,
+    "ci95": [
+      0.0018708941766669828,
+      0.002626175548541866
+    ],
+    "exact_rate": 0.0022351954868148147,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0260818000024301,
+    "decode_shots_per_second": 2300454.7230026172,
+    "physical_marginal": 0.09999999999999998
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 112,
+    "rate": 0.0018666666666666666,
+    "ci95": [
+      0.0015517167635521485,
+      0.00224539777580708
+    ],
+    "exact_rate": 0.0019021670210172838,
+    "paired_delta_vs_minimum_weight": -0.00035,
+    "paired_delta_se": 0.00011665888849997193,
+    "seconds": 0.019305999994685408,
+    "decode_shots_per_second": 3107842.1224757545,
+    "physical_marginal": 0.09999999999999998
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 112,
+    "rate": 0.0018666666666666666,
+    "ci95": [
+      0.0015517167635521485,
+      0.00224539777580708
+    ],
+    "exact_rate": 0.0019021670210172838,
+    "paired_delta_vs_minimum_weight": -0.00035,
+    "paired_delta_se": 0.00011665888849997193,
+    "seconds": 0.008845299998938572,
+    "decode_shots_per_second": 6783263.428849214,
+    "physical_marginal": 0.09999999999999998
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 923,
+    "rate": 0.015383333333333334,
+    "ci95": [
+      0.01442913949213182,
+      0.01639957770075323
+    ],
+    "exact_rate": 0.01562744209329383,
+    "paired_delta_vs_minimum_weight": 0.013166666666666667,
+    "paired_delta_se": 0.0004712900911901102,
+    "seconds": 0.014467800003330922,
+    "decode_shots_per_second": 4147140.545638328,
+    "physical_marginal": 0.09999999999999998
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 153,
+    "rate": 0.00255,
+    "ci95": [
+      0.002177063606962695,
+      0.002986630104769603
+    ],
+    "exact_rate": 0.002455200000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0068818000036117155,
+    "decode_shots_per_second": 8718649.186043,
+    "physical_marginal": 0.11857142857142863
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 153,
+    "rate": 0.00255,
+    "ci95": [
+      0.002177063606962695,
+      0.002986630104769603
+    ],
+    "exact_rate": 0.002455200000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.015140199997404125,
+    "decode_shots_per_second": 3962959.5388625874,
+    "physical_marginal": 0.11857142857142863
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 153,
+    "rate": 0.00255,
+    "ci95": [
+      0.002177063606962695,
+      0.002986630104769603
+    ],
+    "exact_rate": 0.002455200000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.013814799996907823,
+    "decode_shots_per_second": 4343168.197399155,
+    "physical_marginal": 0.11857142857142863
+  },
+  {
+    "distance": 7,
+    "background_p": 0.1,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 473,
+    "rate": 0.007883333333333332,
+    "ci95": [
+      0.0072065262294699,
+      0.008623151266637563
+    ],
+    "exact_rate": 0.008228880000000003,
+    "paired_delta_vs_minimum_weight": 0.005333333333333333,
+    "paired_delta_se": 0.0003384196133842886,
+    "seconds": 0.011946499995246995,
+    "decode_shots_per_second": 5022391.497415264,
+    "physical_marginal": 0.11857142857142863
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 1979,
+    "rate": 0.03298333333333334,
+    "ci95": [
+      0.03158395006403853,
+      0.03444251361728457
+    ],
+    "exact_rate": 0.03334400000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.037384700000984594,
+    "decode_shots_per_second": 1604934.6389945564,
+    "physical_marginal": 0.20000000000000012
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 1979,
+    "rate": 0.03298333333333334,
+    "ci95": [
+      0.03158395006403853,
+      0.03444251361728457
+    ],
+    "exact_rate": 0.03334400000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.02664569999978994,
+    "decode_shots_per_second": 2251770.454537618,
+    "physical_marginal": 0.20000000000000012
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 1979,
+    "rate": 0.03298333333333334,
+    "ci95": [
+      0.03158395006403853,
+      0.03444251361728457
+    ],
+    "exact_rate": 0.03334400000000001,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.02251840000099037,
+    "decode_shots_per_second": 2664487.707712856,
+    "physical_marginal": 0.20000000000000012
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "iid",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 3633,
+    "rate": 0.06055,
+    "ci95": [
+      0.058669600728936025,
+      0.062486666637876234
+    ],
+    "exact_rate": 0.06037760000000003,
+    "paired_delta_vs_minimum_weight": 0.027566666666666666,
+    "paired_delta_se": 0.0008560972016914994,
+    "seconds": 0.012940199998411117,
+    "decode_shots_per_second": 4636713.498042317,
+    "physical_marginal": 0.20000000000000012
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 1662,
+    "rate": 0.0277,
+    "ci95": [
+      0.02641678627599686,
+      0.029043687218929585
+    ],
+    "exact_rate": 0.02857501418192593,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.015898500005278038,
+    "decode_shots_per_second": 3773940.9365714374,
+    "physical_marginal": 0.2
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 1130,
+    "rate": 0.018833333333333334,
+    "ci95": [
+      0.017776040606934482,
+      0.01995223484646825
+    ],
+    "exact_rate": 0.018764486688237037,
+    "paired_delta_vs_minimum_weight": -0.008866666666666667,
+    "paired_delta_se": 0.0005655140536867585,
+    "seconds": 0.01931650000551599,
+    "decode_shots_per_second": 3106152.7700601295,
+    "physical_marginal": 0.2
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 1130,
+    "rate": 0.018833333333333334,
+    "ci95": [
+      0.017776040606934482,
+      0.01995223484646825
+    ],
+    "exact_rate": 0.018764486688237037,
+    "paired_delta_vs_minimum_weight": -0.008866666666666667,
+    "paired_delta_se": 0.0005655140536867585,
+    "seconds": 0.008693799998582108,
+    "decode_shots_per_second": 6901470.01423837,
+    "physical_marginal": 0.2
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "heterogeneous",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 5943,
+    "rate": 0.09905,
+    "ci95": [
+      0.09668532058623057,
+      0.10146601722403996
+    ],
+    "exact_rate": 0.10186371477933828,
+    "paired_delta_vs_minimum_weight": 0.07135,
+    "paired_delta_se": 0.0010803318262114453,
+    "seconds": 0.11189480000030017,
+    "decode_shots_per_second": 536217.9475707455,
+    "physical_marginal": 0.2
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "minimum_weight",
+    "shots": 60000,
+    "failures": 1783,
+    "rate": 0.029716666666666666,
+    "ci95": [
+      0.028387789809042534,
+      0.031105758804350774
+    ],
+    "exact_rate": 0.030009600000000015,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.028935499998624437,
+    "decode_shots_per_second": 2073577.4395760342,
+    "physical_marginal": 0.20857142857142863
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "maximum_likelihood",
+    "shots": 60000,
+    "failures": 1783,
+    "rate": 0.029716666666666666,
+    "ci95": [
+      0.028387789809042534,
+      0.031105758804350774
+    ],
+    "exact_rate": 0.030009600000000015,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.23419369999828632,
+    "decode_shots_per_second": 256198.181250986,
+    "physical_marginal": 0.20857142857142863
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "geometric_calibrated",
+    "shots": 60000,
+    "failures": 1783,
+    "rate": 0.029716666666666666,
+    "ci95": [
+      0.028387789809042534,
+      0.031105758804350774
+    ],
+    "exact_rate": 0.030009600000000015,
+    "paired_delta_vs_minimum_weight": 0.0,
+    "paired_delta_se": 0.0,
+    "seconds": 0.0340446999980486,
+    "decode_shots_per_second": 1762388.859453575,
+    "physical_marginal": 0.20857142857142863
+  },
+  {
+    "distance": 7,
+    "background_p": 0.2,
+    "model": "burst",
+    "decoder": "geometric_uncalibrated",
+    "shots": 60000,
+    "failures": 3222,
+    "rate": 0.0537,
+    "ci95": [
+      0.05192466328436861,
+      0.05553248115938679
+    ],
+    "exact_rate": 0.054339840000000035,
+    "paired_delta_vs_minimum_weight": 0.023983333333333332,
+    "paired_delta_se": 0.0008162461432271165,
+    "seconds": 0.023826500000723172,
+    "decode_shots_per_second": 2518204.520100682,
+    "physical_marginal": 0.20857142857142863
+  }
+]
