@@ -93,3 +93,16 @@ noise, circuit faults, general-Pauli codes and isolated decoder execution
 require additional implementation and independent tests before claims.
 
 For a practical research workflow, see [PUT_TO_WORK.md](PUT_TO_WORK.md).
+
+### Public CI verification
+
+The published implementation commit is
+`aaad1aa1adfe358f468cfd7c371fb1f29259fcf5`. All three Linux CI jobs (Python
+3.10, 3.12 and 3.14) completed successfully, including tests, installation and
+CLI examples: [GitHub Actions run](https://github.com/JasonSEFIDEFI/SEFI_QEC_Stack/actions/runs/40046229740).
+The companion SEFI-PY implementation commit
+`c907b24ab91293bd542807b975e07f81b3be7cef` also passed its actual-class adapter
+CI: [integration run](https://github.com/JasonSEFIDEFI/SEFI-PY/actions/runs/40046235231).
+This section is a documentation-only follow-up; those outcomes refer to the
+exact implementation commits above. Both updates were published on
+`feat/quantum-benchmark-v1`; default branches were not changed or merged.
