@@ -96,3 +96,7 @@ data for downstream QDK workflows.
 
 Status
 Active development as part of the SEFI and GWFM research platform.
+
+## Standard quantum benchmark pipeline
+
+See [benchmark_pipeline](benchmark_pipeline/README.md) for seeded standard-QM states, CPTP channels, circuits, syndrome-only repetition-code datasets, baselines, CI and the [public research ledger](benchmark_pipeline/RESEARCH_LEDGER.md). This standalone package has its own MIT license; existing repository licensing and code are unchanged. No new physics or SEFI advantage is claimed.

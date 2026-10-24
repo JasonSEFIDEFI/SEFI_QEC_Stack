@@ -1,0 +1,4 @@
+# Recorded local numeric/test dependencies; Python 3.14.7.
+# CI uses compatible releases across Python 3.10/3.12/3.14 instead.
+numpy==2.5.4
+pytest==9.1.1

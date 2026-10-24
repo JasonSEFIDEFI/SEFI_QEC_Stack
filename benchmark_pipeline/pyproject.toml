@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sefi-quantum-benchmark"
+version = "0.1.0"
+description = "Seeded standard quantum mechanics and syndrome-only reference QEC benchmarks"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3"]
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+sefi-benchmark = "sefi_benchmark.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

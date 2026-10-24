@@ -1,0 +1,197 @@
+{
+  "environment": {
+    "endianness": "qubit 0 is MSB",
+    "numpy": "2.5.4",
+    "package": "0.1.0",
+    "python": "3.14.7",
+    "rng": "PCG64",
+    "schema": "sefi-benchmark/1"
+  },
+  "purpose": "public reproducibility demo, not blind",
+  "runs": {
+    "bit3": {
+      "analytic_identity": 0.1,
+      "analytic_minimum_weight": 0.028000000000000008,
+      "environment": {
+        "endianness": "qubit 0 is MSB",
+        "numpy": "2.5.4",
+        "package": "0.1.0",
+        "python": "3.14.7",
+        "rng": "PCG64",
+        "schema": "sefi-benchmark/1"
+      },
+      "identity": {
+        "codespace_failures": 2691,
+        "logical_error_rate": 0.1018,
+        "logical_failures": 1018,
+        "seconds": 0.17137750000983942,
+        "shots": 10000,
+        "wilson95": [
+          0.09602543417296856,
+          0.10788038212943828
+        ]
+      },
+      "minimum_weight": {
+        "codespace_failures": 0,
+        "logical_error_rate": 0.0274,
+        "logical_failures": 274,
+        "seconds": 0.24790570000186563,
+        "shots": 10000,
+        "wilson95": [
+          0.02437738667154232,
+          0.030785568588421196
+        ]
+      },
+      "test_input_sha256": "6d7fd263fce69f1096a60ef0ed7fc79999bcdc68a7d355013c2082a894aa4cc7",
+      "train_lookup": {
+        "codespace_failures": 0,
+        "logical_error_rate": 0.0274,
+        "logical_failures": 274,
+        "seconds": 0.2965755000041099,
+        "shots": 10000,
+        "wilson95": [
+          0.02437738667154232,
+          0.030785568588421196
+        ]
+      }
+    },
+    "bit5": {
+      "analytic_identity": 0.1,
+      "analytic_minimum_weight": 0.008560000000000002,
+      "environment": {
+        "endianness": "qubit 0 is MSB",
+        "numpy": "2.5.4",
+        "package": "0.1.0",
+        "python": "3.14.7",
+        "rng": "PCG64",
+        "schema": "sefi-benchmark/1"
+      },
+      "identity": {
+        "codespace_failures": 4102,
+        "logical_error_rate": 0.1,
+        "logical_failures": 1000,
+        "seconds": 0.2803750000020955,
+        "shots": 10000,
+        "wilson95": [
+          0.09427283017063046,
+          0.10603436852591083
+        ]
+      },
+      "minimum_weight": {
+        "codespace_failures": 0,
+        "logical_error_rate": 0.0088,
+        "logical_failures": 88,
+        "seconds": 0.2822391000081552,
+        "shots": 10000,
+        "wilson95": [
+          0.0071487758942133965,
+          0.010828464105139289
+        ]
+      },
+      "test_input_sha256": "b1da6afa45e49e7cdb64c651185c605904f2586888e477c033047a186e122d2a",
+      "train_lookup": {
+        "codespace_failures": 0,
+        "logical_error_rate": 0.0088,
+        "logical_failures": 88,
+        "seconds": 0.2863504999986617,
+        "shots": 10000,
+        "wilson95": [
+          0.0071487758942133965,
+          0.010828464105139289
+        ]
+      }
+    },
+    "phase3": {
+      "analytic_identity": 0.1,
+      "analytic_minimum_weight": 0.028000000000000008,
+      "environment": {
+        "endianness": "qubit 0 is MSB",
+        "numpy": "2.5.4",
+        "package": "0.1.0",
+        "python": "3.14.7",
+        "rng": "PCG64",
+        "schema": "sefi-benchmark/1"
+      },
+      "identity": {
+        "codespace_failures": 2691,
+        "logical_error_rate": 0.1018,
+        "logical_failures": 1018,
+        "seconds": 0.1856476999964798,
+        "shots": 10000,
+        "wilson95": [
+          0.09602543417296856,
+          0.10788038212943828
+        ]
+      },
+      "minimum_weight": {
+        "codespace_failures": 0,
+        "logical_error_rate": 0.0274,
+        "logical_failures": 274,
+        "seconds": 0.18917939999664668,
+        "shots": 10000,
+        "wilson95": [
+          0.02437738667154232,
+          0.030785568588421196
+        ]
+      },
+      "test_input_sha256": "addcc3ecb5bed335ff97a0d4dde0d834b518858c708a5affb41a42a3f5745602",
+      "train_lookup": {
+        "codespace_failures": 0,
+        "logical_error_rate": 0.0274,
+        "logical_failures": 274,
+        "seconds": 0.19707810001273174,
+        "shots": 10000,
+        "wilson95": [
+          0.02437738667154232,
+          0.030785568588421196
+        ]
+      }
+    },
+    "phase5": {
+      "analytic_identity": 0.1,
+      "analytic_minimum_weight": 0.008560000000000002,
+      "environment": {
+        "endianness": "qubit 0 is MSB",
+        "numpy": "2.5.4",
+        "package": "0.1.0",
+        "python": "3.14.7",
+        "rng": "PCG64",
+        "schema": "sefi-benchmark/1"
+      },
+      "identity": {
+        "codespace_failures": 4102,
+        "logical_error_rate": 0.1,
+        "logical_failures": 1000,
+        "seconds": 0.5118602000002284,
+        "shots": 10000,
+        "wilson95": [
+          0.09427283017063046,
+          0.10603436852591083
+        ]
+      },
+      "minimum_weight": {
+        "codespace_failures": 0,
+        "logical_error_rate": 0.0088,
+        "logical_failures": 88,
+        "seconds": 0.29436359999817796,
+        "shots": 10000,
+        "wilson95": [
+          0.0071487758942133965,
+          0.010828464105139289
+        ]
+      },
+      "test_input_sha256": "0f6b0264bc14cb2dd81055aa5c20fb64ead247b9d00f0b2af0f4c297bd1d7064",
+      "train_lookup": {
+        "codespace_failures": 0,
+        "logical_error_rate": 0.0088,
+        "logical_failures": 88,
+        "seconds": 0.4067815999878803,
+        "shots": 10000,
+        "wilson95": [
+          0.0071487758942133965,
+          0.010828464105139289
+        ]
+      }
+    }
+  }
+}

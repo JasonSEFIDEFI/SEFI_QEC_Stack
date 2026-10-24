@@ -1,0 +1,23 @@
+name: Quantum benchmark pipeline
+on:
+  push:
+    paths: ['benchmark_pipeline/**', 'quantum/benchmark.py', '.github/workflows/quantum-benchmark.yml']
+  pull_request:
+    paths: ['benchmark_pipeline/**', 'quantum/benchmark.py', '.github/workflows/quantum-benchmark.yml']
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '${{ matrix.python }}'
+      - run: python -m pip install -e './benchmark_pipeline[test]'
+      - run: python -m pytest benchmark_pipeline/tests -q
+      - run: sefi-benchmark qec /tmp/sefi-example --seed 42 --shots 1000 --code phase3
+      - run: sefi-benchmark benchmark /tmp/sefi-example
