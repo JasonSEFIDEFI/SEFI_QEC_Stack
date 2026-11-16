@@ -1,98 +1,44 @@
-SEFI‑QEC Stack
-A modular quantum‑error‑correction engine built on geometric identity principles from the SEFI canon. The stack provides stabilizer acquisition, syndrome transport, multi‑decoder correction, Pauli‑frame routing, and warp‑residual geometric analysis in a clean, dependency‑free architecture. All directories include __init__.py to support package‑level imports and orchestrated pipeline execution.
+# SEFI QEC Stack — Research Software
 
-Purpose
-The SEFI‑QEC Stack serves as the dedicated quantum‑error‑correction engine for SEFI and GWFM research. It is designed for real‑time decoding pipelines, low‑latency correction, deterministic transport, and geometric consistency across worldline‑based field models. The architecture demonstrates autonomous systems‑level development suitable for high‑level technical evaluation.
+**Status: experimental software prototype; not validated quantum error correction.**
 
-Features
-Stabilizer parity evaluation
+This repository contains Python software exploring identity-state encoding, rule-based correction, simulated channel disturbances, and proposed geometric diagnostics associated with SEFI/GWFM. The terminology is part of a research model, not proof of a new physical quantum-error-correction mechanism.
 
-Syndrome extraction and transport
+## What exists in this repository
 
-Majority‑vote and stabilizer‑energy decoders
+- [`stack.py`](stack.py) — `sefi_qec_pipeline(observables, channel_model)`, which orchestrates identity construction, propagation, encoding, a supplied channel, decoding, rule-based correction, and diagnostics.
+- [`core/identity_types.py`](core/identity_types.py) — `Phi` identity-state data object.
+- [`codec/sefi_codec.py`](codec/sefi_codec.py) — encoding and decoding wrappers.
+- [`qec/stabilizer.py`](qec/stabilizer.py) — rule-based identity checks and corrections; not a demonstrated physical stabilizer code.
+- [`fidelity/fidelity.py`](fidelity/fidelity.py) — a **heuristic identity-match score**, despite its historical function name. It is **not quantum-state fidelity** and does not establish a physical fidelity bound.
+- [`quantum/circuits.py`](quantum/circuits.py) — a 20-bit representation and parity calculation; its `syndrome()` implementation is explicitly a placeholder, not stabilizer syndrome measurement.
+- [`tests/test_stack.py`](tests/test_stack.py) — source-level software tests for the pipeline and selected behaviors.
 
-Pauli‑frame consistency and correction routing
+**Correction to earlier documentation:** the main orchestrator is `stack.py` at repository root, **not** `qec_stack/stack.py`. There is no verified `QECStack().run()` API here.
 
-Warp‑residual geometry analysis
+## Reproduce and inspect
 
-Unified stack.py orchestrator for full‑pipeline coordination
+From the repository root in a suitable Python environment:
 
-Package‑ready directory structure using __init__.py in all modules
+```bash
+python -m pytest tests/test_stack.py
+python stack.py
+```
 
-Repository Structure
-Code
-qec_stack/
-│
-├── stack.py
-│
-├── stabilizers/
-│   ├── __init__.py
-│   ├── stabilizer_core.py
-│   └── parity_eval.py
-│
-├── syndromes/
-│   ├── __init__.py
-│   ├── extract.py
-│   └── transport.py
-│
-├── decoders/
-│   ├── __init__.py
-│   ├── majority_vote.py
-│   └── energy_min.py
-│
-├── pauli_frame/
-│   ├── __init__.py
-│   └── frame_router.py
-│
-└── warp_geometry/
-    ├── __init__.py
-    └── residual_analysis.py
-Usage
-Import the stack as a package:
+These are commands to run, **not a claim that this documentation audit executed them**. Review the test results, environment, and dependencies before reporting success. The direct pipeline entry point is `sefi_qec_pipeline(observables, channel_model)`.
 
-python
-from qec_stack import stack
+## Optional Azure integration
 
-engine = stack.QECStack()
-engine.run()
-Call individual modules directly:
+The repository contains [`quantum/azure_job.py`](quantum/azure_job.py) with an Azure Quantum submission wrapper and an optional `azure-quantum` dependency declared in [`pyproject.toml`](pyproject.toml). This is an integration path, **not evidence of a successful cloud job or a hardware QEC demonstration**. Actual target compatibility, credentials, backend execution, and results must be checked independently.
 
-python
-from qec_stack.stabilizers import parity_eval
-from qec_stack.decoders import majority_vote
-License
-MIT License.
+## Scientific and engineering limits
 
-Azure Quantum
--------------
-Install the optional Azure integration with:
+- The software's identity-field corrections are not equivalent to quantum stabilizer measurements or fault-tolerant logical correction.
+- The historical fidelity function returns a rule-based score, not a physical overlap or measured logical fidelity.
+- A 20-bit register representation is not, by itself, a quantum error-correcting code.
+- No logical-error-rate advantage, threshold, latency guarantee, or experimental SEFI mechanism is established here.
+- Before making performance claims, specify a physical noise model, reference code and decoder, matched baselines, reproducible seeds, uncertainty, and test hardware.
 
-    pip install -e ".[azure]"
+The SEFI/GWFM/DEFI interpretations remain hypotheses unless independently derived and tested. Preserve mathematical definitions, simulation outputs, and physical evidence as separate categories.
 
-Set these workspace variables before running an Azure job:
-
-    AZURE_QUANTUM_SUBSCRIPTION_ID
-    AZURE_QUANTUM_RESOURCE_GROUP
-    AZURE_QUANTUM_WORKSPACE_NAME
-    AZURE_QUANTUM_LOCATION
-    AZURE_QUANTUM_TARGET
-    AZURE_QUANTUM_PROVIDER_ID (optional)
-
-Authenticate through the standard Azure credential chain, for example with
-`az login`. The Python integration generates a 20-qubit OpenQASM circuit and
-supports submission, status refresh, result retrieval, and cancellation:
-
-    from quantum.azure_job import AzureSEFIJob
-    from quantum.circuits import build_circuit
-
-    job = AzureSEFIJob()
-    job.connect()
-    job.submit_register(build_circuit(phi))
-    job.refresh()
-    results = job.result()
-
-The Q# source files are under `quantum/qsharp/` and are included as package
-data for downstream QDK workflows.
-
-Status
-Active development as part of the SEFI and GWFM research platform.
+**Author:** Jason Duran Dutton. Research and software development in progress.
